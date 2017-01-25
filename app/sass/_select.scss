@@ -1,0 +1,141 @@
+.ik_select {
+	width: 180px;
+	height: 34px;
+	background-color: #fff;
+	border: 1px solid #c1a285;
+	border-radius: 16px;
+	position: relative;	
+	cursor: default;
+	&:after {
+		content: '\e906'; 
+		position: absolute;
+		left: 150px;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 13px;
+		color: #c1a285;
+		font-family: 'icomoon';
+	}
+}
+.ik_select_link {
+	/* Fake select you click on to open the dropdown */
+}
+.ik_select_link_focus {
+	/* Focused state of the fake select */
+}
+.ik_select_link_disabled {
+	/* Disabled state of the fake select */
+}
+.ik_select_link_text {
+	/*
+	Wrapper for the text inside the link.
+	It's best to add some width limiting rules here like
+	display:block;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	*/
+	display: inline-block;
+	padding-left: 23px;
+	line-height: 32px;
+	color: #4b4b4b;
+	font-size: 16px;
+	font-weight: 300;
+	position: relative;
+	// &:after {
+	// 	font-family: 'icomoon';
+	// 	content: '\e900';
+	// 	color: #4b4b4b;
+	// 	font-size: 8px;
+	// 	position: absolute;
+	// 	left: 100%;
+	// 	top: 55%;
+	// 	transform: translate(5px, -50%);
+	// }
+}
+
+.ik_select_dropdown {
+	/*
+	Dropdown wrapper. Needed for script calculations.
+	You should not add any visual styles here.
+	You can shift the position of the dropdown
+	by changing top and left values like
+	top: -2px;
+	left: -5px;
+	*/
+	top: 45px;
+}
+.ik_select_list {
+	/*
+	Wrapper for the options list.
+	Now that's a good place to add visual styles.
+	*/
+	background-color: white;
+	border: 1px solid #d1d1d1;
+	box-shadow: 0 6px 6px rgba(0, 0, 1, 0.16);
+	position: relative;
+	cursor: default;
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 0;
+		height: 0;
+		border: 15px solid transparent;
+		border-bottom: 13px solid #d1d1d1;
+		border-left: 7px solid transparent;
+		border-right: 7px solid transparent;
+		bottom: 100%;
+		right: 14px;
+	}
+		&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 0;
+		height: 0;
+		border: 15px solid transparent;
+		border-bottom: 11px solid #fff;
+		border-left: 6px solid transparent;
+		border-right: 6px solid transparent;
+		bottom: 100%;
+		right: 15px;
+	}
+}
+.ik_select_optgroup {
+	/* Optgroup */
+}
+.ik_select_optgroup_label {
+	/* Optgroup label */
+}
+.ik_select_option {
+	/* Option */
+	color: #4b4b4b;
+font-size: 16px;
+font-weight: 300;
+padding: 8px 30px;
+&:last-child {
+	margin-bottom: 0;
+}
+}
+.ik_select_option_label {
+	/* Option label */
+}
+.ik_select_hover {
+	/* The hovered state of an option */
+	background-color: #e8e8e8;
+}
+.ik_select_active {
+	/* The active state of an option */
+	background-color: #e8e8e8;
+}
+
+.ik_select_filter_wrap {
+	/* Wrapper for the filter input */
+}
+.ik_select_filter {
+	/* Filter input */
+}
+.ik_nothing_found {
+	/* Block that's shown when there's nothing found. */
+}

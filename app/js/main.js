@@ -2,9 +2,13 @@
 $(document).ready(function(){
 
 
+  $('.select-1').ikSelect({
+    autoWidth: false,
+        ddFullWidth: false
+  });
 
   $('.mh-1').matchHeight();
-
+  $('.catalog-wrapp-item').matchHeight();
 // $('#slider-1').bxSlider({
 // 		controls: true, 
 // 		pager: false,
