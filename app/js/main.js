@@ -1,14 +1,54 @@
 
 $(document).ready(function(){
 
+  $(document).on('click', '.catalog-wrapp-item:not(.add)', function(e) {
+    e.preventDefault(); 
+
+    if ($('.catalog-wrapp-item.add').length) {
+      $('.catalog-wrapp-item.add').after($('.item-c + .hide-content'));
+      $('.catalog-wrapp-item').removeClass('add');
+    }
+
+    var thisEl = $(this).parent();
+    var thisElPos = thisEl.position().top;
+
+    if ($(this).parent().next().length) {
+      while ( (thisEl.next().length) && (thisElPos == thisEl.next().position().top) ) {
+        thisEl= thisEl.next();  
+      }
+    }
+
+    var lastElement = thisEl;
+    console.log(lastElement.index());
+    $(this).addClass('add');
+    var content = $(this).next();
+    lastElement.after(content);
+  });
+
+
+
+  $('.catalog-wrapp-item').on('click', '.rate > *, .size-m, .calc-res *', function(e) {
+    e.stopPropagation();
+  });
+
+
+  $(document).on('click', '.icon-close-content', function(e) {
+    e.preventDefault(); 
+    $('.catalog-wrapp-item.add').after($('.item-c + .hide-content'));
+    $('.catalog-wrapp-item').removeClass('add');
+
+  });
 
   $('.select-1').ikSelect({
     autoWidth: false,
-        ddFullWidth: false
+    ddFullWidth: false
   });
 
   $('.mh-1').matchHeight();
   $('.catalog-wrapp-item').matchHeight();
+  $('.wrapp-p').matchHeight({
+   byRow: false 
+ })
 // $('#slider-1').bxSlider({
 // 		controls: true, 
 // 		pager: false,
@@ -18,33 +58,7 @@ $(document).ready(function(){
 // 		moveSlides: 1
 // 	});
 
-$('.owl-carousel').owlCarousel({
-  loop:true,
-  margin:10,
-  nav:true,
-  center: true,
-  autoHeight: true,
-  touchDrag: false,
-  mouseDrag: false,
-  dotsEach: true,
-  responsiveClass:true,
-  responsiveClass:true,
-  navText: ['<i class="fa fa-chevron-left" aria-hidden="true"></i>','<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
-  responsive:{
-    0:{
-      stagePadding: 0,
-      items:1
-    },
-    600:{
-      stagePadding: 100,
-      items:1
-    },
-    1000:{
-      stagePadding: 200,
-      items:1
-    }
-  }
-});
+
 
 
 

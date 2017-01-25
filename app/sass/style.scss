@@ -511,15 +511,37 @@
 .js-find-row {
 	.item-c {
 		margin-bottom: 18px;
-		&:nth-child(4n+1) {
-			clear: left;
+		// &:nth-child(4n+1) {
+		// 	clear: left;
+		// }
+		// @media #{$bp-medium} {
+		// 	&:nth-child(4n+1) {
+		// 		clear: none;
+		// 	} 
+		// 	&:nth-child(2n+1) {
+		// 		clear: left;
+		// 	}
+		// }
+		&+.hide-content {
+			display: block;
+			margin-bottom: 18px;
 		}
-		@media #{$bp-medium} {
-			&:nth-child(4n+1) {
-				clear: none;
-			} 
-			&:nth-child(2n+1) {
-				clear: left;
+	}
+	.hide-content {
+		display: none;
+		width: 100%;
+		padding: 0 10px;
+		clear: both;
+		.content {
+			background-color: #514742;
+			min-height: 50px;
+			position: relative;
+			.icon-close-content {
+				position: absolute;
+				cursor: pointer;
+				right: 10px;
+				top: 10px;
+				font-size: 14px;
 			}
 		}
 	}
@@ -527,6 +549,7 @@
 
 
 .catalog-wrapp-item {
+	cursor: pointer;
 	text-align: left;
 	background-color: #f1f1f1;
 	padding: 10px 15px 70px;
