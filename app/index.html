@@ -10,7 +10,6 @@
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="fonts/fonts.css">  
 	<link rel="stylesheet" href="css/jquery.fancybox.css">
 	<link rel="stylesheet" href="css/sprite.css">
 
@@ -32,7 +31,7 @@
 
 					<li class="slide">
 						<a class="m-menu--link-sd" href="">Статьи</a>
-						<span class="m-menu--pointer"></span>
+						<span class="m-menu--pointer ico i-slide-m"></span>
 
 						<div class="m-menu--sd">
 							<menu>
@@ -49,7 +48,7 @@
 
 					<li class="slide">
 						<a class="m-menu--link-sd" href="">Продукция</a>
-						<span class="m-menu--pointer"></span>
+						<span class="m-menu--pointer ico i-slide-m"></span>
 
 						<div class="m-menu--sd">
 							<menu>
@@ -63,7 +62,7 @@
 
 					<li class="slide">
 						<a class="m-menu--link-sd" href="">Производители</a>
-						<span class="m-menu--pointer"></span>
+						<span class="m-menu--pointer ico i-slide-m"></span>
 
 						<div class="m-menu--sd">
 							<menu>
@@ -106,7 +105,7 @@
 							</div>
 
 							<div class="form-row mt15 mb0 clearfix">
-								<input type="submit" value="Войти" name="" id="" class="btn-grey size-m btn btn-submit f-left">
+								<button type="submit" class="btn-grey size-m btn btn-submit f-left">Войти</button>
 
 								<a href="#popup-reg" class="btn-grey size-m btn btn-submit f-right fancybox">Регистрация</a>
 							</div>
@@ -140,7 +139,7 @@
 							</div>
 
 							<div class="form-row mt15 align-right mb0">
-								<input type="submit" value="Заказать" name="" id="" class="btn-grey size-m btn btn-submit">
+								<button type="submit" class="btn-grey size-m btn btn-submit">Заказать</button>
 							</div>
 						</form>
 					</div>
@@ -160,7 +159,7 @@
 			<div class="top-line">
 				<div class="container">
 					<div class="top-city">
-						<a href="">Республика Крым</a>
+						<a href=""><i class="icon-icon-place"></i>Республика Крым</a>
 					</div>
 				</div>
 			</div>
@@ -169,7 +168,7 @@
 					<div class="row">
 						<div class="col-h-logo col-md-2 col-sm-3 col-xs-5 col-xxs-12">
 							<div class="h-logo">
-								<a href="/"><img src="img/logo.png" alt="" width="165" height="54"></a>
+								<a href="/"><img src="img/logo_white.svg" alt=""></a>
 							</div>
 						</div>
 
@@ -252,7 +251,7 @@
 												</div>
 
 												<div class="form-row mt15 align-center">
-													<input type="submit" value="Войти" name="" id="" class="btn-grey size-m btn btn-submit">
+													<button type="submit" class="btn-grey size-m btn btn-submit">Войти</button>
 												</div>
 
 												<div class="form-row mt5 mb5 align-center">
@@ -274,7 +273,7 @@
 						</div>
 
 						<div class="slideout-btn col-sm-1 col-xs-2 hidden-md hidden-lg col-xs-2">
-							<button class="slideout-menu-btn"></button>
+							<button class="slideout-menu-btn"><i class="icon-menu"></i></button>
 						</div>
 					</div>
 				</div>
@@ -341,6 +340,18 @@
 							<a href="#">
 								<div class="h-img"><i class="ico icon-1-5"></i></div>
 								<span>Мебель для гостиной</span>
+							</a>
+						</div>
+						<div class="top-tabs-item">
+							<a href="#">
+								<div class="h-img"><i class="ico icon-1-3"></i></div>
+								<span>Мебель для детской</span>
+							</a>
+						</div>
+						<div class="top-tabs-item">
+							<a href="#">
+								<div class="h-img"><i class="ico icon-1-3"></i></div>
+								<span>Мебель для детской</span>
 							</a>
 						</div>
 						<div class="top-tabs-item">
@@ -1543,6 +1554,34 @@
 			</div>
 		</div>
 
+		<div class="sect-advantages bg-tree">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-sm-4 col-xs-12">
+						<div class="adv-item">
+							<i class="ico ic-1"></i>
+							<h3>ДОСТУПНАЯ<br>ЦЕНА</h3>
+							<p>НАши цены  ниже рыночных. Также всегда найдется спецпредложения или акция!</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-12">
+						<div class="adv-item">
+							<i class="ico ic-2"></i>
+							<h3>РАБОТА<br>НА  РЕЗУЛЬТАТ</h3>
+							<p>Мы предлагаем только качественный продукт и предоставляем гарантию на каждое изделие</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-12">
+						<div class="adv-item">
+							<i class="ico ic-3"></i>
+							<h3>КОМФОРТНАЯ<br>ОПЛАТА</h3>
+							<p>Мы принимаем оплату как наличным и без наличным расчетом.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div class="sect-opinions">
 			<div class="container">
 				<div class="comment-title-wrapp justify-c">
@@ -1812,7 +1851,7 @@
 									<input type="text" name="phone" placeholder="Ваш телефон +7" id="" class="inp-white size-m field-text w100p">
 								</div>
 								<div class="col-sm-4 col-xs-4 col-md-4 mbxs">
-									<input type="submit" value="Отправить" class="btn-grey size-m btn">
+									<button type="submit" class="btn-grey size-m btn">Отправить</button>
 								</div>
 							</div>
 						</form>
@@ -1824,7 +1863,7 @@
 					<div class="row">
 						<div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
 							<div class="f-logo">
-								<a href="/"><img src="/img/logo_white.svg" alt=""></a>
+								<a href="/"><img src="img/logo_white.svg" alt=""></a>
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-3 col-xs-6 col-xxs-12">
@@ -1835,7 +1874,7 @@
 								<address><a href="mailto:main@betonnya-logika.ru">main@betonnya-logika.ru</a></address>
 							</div>
 						</div>
-						<div class=""><!--</div-->
+						<div class="">
 							<div class="col-md-3 col-sm-5 col-xs-12 col-xxs-12">
 								<div class="f-menu row">
 									<div>
@@ -1870,16 +1909,58 @@
 			</div>
 		</footer>
 
+		<div class="fix-scroll--wrap">	
+			<div class="fix-scroll callback-fix hidden-xs">
+				<div class="fix-scroll--btn" onClick="">
+					<span class="icon">
+						<i class="ico ic-phone"></i>
+					</span>
+					
+					<span class="text" style="height: 140px; ">
+						<span class="text-rotate">ЗАКАЗАТЬ  ЗВОНОК</span>
+					</span>
+				</div>
+				
+				<div class="fix-scroll--container callback-fix--container">
+					<div class="wrap">
+						<div class="fix-scroll--title">Заказать бесплатный обратный звонок</div>
+						
+						<div class="form-b">
+							<form action="">
+								<div class="form-row">
+									<input type="text" placeholder="Ваше имя" name="" id="" class="inp-white__brown size-m field-text w100p">
+								</div>
+								
+								<div class="form-row mt15">
+									<input type="text" placeholder="Ваш телефон" name="phone" id="" class="inp-white__brown size-m field-text w100p">
+								</div>
+								
+								<div class="form-row mt15 align-right">
+									<button type="submit" class="btn-grey size-m btn btn-submit">Заказать</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- кнопка Вверх -->
+		<div class="btn-top-container hidden-sm hidden-xs">
+			<div class="btn-top-wrap">
+				<span id="back-top">
+					<a href="#top"><span>ВВЕРХ</span></a>
+				</span>
+			</div><!-- end btn-top-wrap -->
+		</div><!-- end inner-wrapper -->
+
 
 	</div>
 
 
 
 	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-	<script src="js/jquery.ikSelect.min.js"></script>
-	<script src="js/slick.min.js"></script>
-	<script src="js/jquery.fancybox.pack.js"></script>
-	<script src="js/jquery.matchHeight.js"></script>
+	<script src="js/libs.min.js"></script>
 	<script src="js/main.js"></script>
 
 

@@ -1,16 +1,16 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?gluzqf');
-  src:  url('../fonts/icomoon.eot?gluzqf#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?gluzqf') format('truetype'),
-    url('../fonts/icomoon.woff?gluzqf') format('woff'),
-    url('../fonts/icomoon.svg?gluzqf#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?uvv083');
+  src:  url('../fonts/icomoon.eot?uvv083#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?uvv083') format('truetype'),
+    url('../fonts/icomoon.woff?uvv083') format('woff'),
+    url('../fonts/icomoon.svg?uvv083#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
+  /* use !important to prevent issues with browser extensions that change ../fonts */
   font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
@@ -34,19 +34,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-close-content:before {
+.icon-up:before {
   content: "\e907";
 }
-.icon-left-half-star:before {
-  content: "\e904";
-}
-.icon-right-half-star:before {
-  content: "\e905";
-}
-.icon-triagle:before {
-  content: "\e906";
-}
-.icon-arrow-down:before {
+.icon-close-content:before {
   content: "\e900";
 }
 .icon-icon-place:before {
@@ -55,8 +46,17 @@
 .icon-left-arrow:before {
   content: "\e902";
 }
-.icon-right-arrow:before {
+.icon-left-half-star:before {
   content: "\e903";
+}
+.icon-right-arrow:before {
+  content: "\e904";
+}
+.icon-right-half-star:before {
+  content: "\e905";
+}
+.icon-triagle:before {
+  content: "\e906";
 }
 .icon-menu:before {
   content: "\e9bd";

@@ -1,5 +1,19 @@
+var slideout = new Slideout({
+	'panel': document.getElementById('panel'),
+	'menu': document.getElementById('mobile-menu'),
+	'padding': -276,
+	'tolerance': 70
+});
 
+document.querySelector('.slideout-menu-btn').addEventListener('click', function() {
+	slideout.toggle();
+});
 
+if($('#mobile-menu a.fancybox').length) {
+	document.querySelector('#mobile-menu a.fancybox').addEventListener('click', function() {
+		slideout.toggle();
+	});
+}
 
 
 
@@ -9,9 +23,18 @@ $(document).ready(function(){
 
 
 
+	$(function() {
+		$('.top-tabs-caption').on('click', 'li:not(.active)', function() {
+			$(this)
+			.addClass('active').siblings().removeClass('active')
+			.closest('div.top-tabs').find('.top-tabs-content').removeClass('active').css({opacity: '0',display: 'none'}).eq($(this).index()).addClass('active').css('display', 'block').animate({opacity: '1'}, 300);
 
+		})
+	});
 
-
+$('.top-tabs-caption').on('click', 'a', function(e) {
+e.preventDefault();
+});
 
 	$(document).on('click', '.catalog-wrapp-item:not(.add)', function(e) {
 		e.preventDefault(); 
@@ -127,14 +150,7 @@ $(document).ready(function(){
 	}
 
 
-// $('#slider-1').bxSlider({
-// 		controls: true, 
-// 		pager: false,
-// 		slideWidth: 940,
-// 		minSlides: 4,
-// 		maxSlides: 4,
-// 		moveSlides: 1
-// 	});
+
 
 
 
@@ -149,25 +165,51 @@ $(document).ready(function(){
  
  // });
 
-// $('header a[href^="#"]').on('click', function(event) {
-
-//     var target = $( $(this).attr('href') );
-
-//     if( target.length ) {
-//         event.preventDefault();
-//         $('html, body').animate({
-//             scrollTop: target.offset().top -85
-//         }, 600);
-//     }
-
-// });
-
 
 
 //  jQuery(function($){ 
 //    $(".phone_mask_1").mask("+7(999) 999-9999");
 //    $("#phone_mask_2").mask("+7(999) 999-9999");
 // });
+
+
+
+
+
+/* кнопка Вверх */
+$("#back-top").hide();
+
+$(function () {
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 250) {
+			$('#back-top').fadeIn(200);
+		} else {
+			$('#back-top').fadeOut(200);
+		}
+
+		var scrollBottom = $(document).height() - $(window).scrollTop() - $(window).height() ;
+
+
+		if(scrollBottom < 60) {
+			$('#back-top').css('bottom', '235px')
+		} else {
+			$('#back-top').css('bottom', '50px')
+		}
+	});
+
+	$('#back-top a').click(function () {
+		$('body,html').animate({
+			scrollTop: 0
+		}, 800);
+
+		return false;
+	});
+});
+
+
+
+
+
 
 $('input,textarea').focus(function(){
 	$(this).data('placeholder',$(this).attr('placeholder'))
@@ -187,12 +229,18 @@ $('input,textarea').focus(function(){
 
 $(window).on('load', function() {
 
+	menuDropDown()
+	menuSlideDown();
 	footerHeight();
+	fixScrollBlock();
+	fixScrollBlockCenter(100);
+	jsSlide()
 
 });
 
 $(window).resize(function(){
 	footerHeight();
+	fixScrollBlockCenter(100);
 })
 
 
@@ -207,3 +255,110 @@ function footerHeight () {
 	$('.wrapper-p').css('paddingBottom', footerHeight);
 
 };
+
+//js-slide (раскрываемые блоки)
+//если задавать single, будет открытым только один
+function jsSlide(){
+	$('body').on('click', '.js-slide-btn', function(e){
+		e.preventDefault();
+		
+		if($(this).closest('.js-slide-wrap').data('js-slide') == 'single' && !$(this).closest('.js-slide-wrap').is('.open')) {
+			$(this).closest('.js-slide-wrap-container').find('.js-slide-wrap.open').removeClass('open').children('.js-slide').slideUp(300);
+			$(this).closest('.js-slide-wrap').toggleClass('open').children('.js-slide').slideToggle(400, function(){
+				if($(this).closest('.fix-scroll')) {
+					fixScrollBlockCenter(150);
+				}
+			});
+			
+		} else {
+			$(this).closest('.js-slide-wrap').toggleClass('open').children('.js-slide').slideToggle(400, function(){
+				if($(this).closest('.fix-scroll')) {
+					fixScrollBlockCenter(150);
+				}
+			});
+		}
+		
+		
+	});
+}
+
+
+// блоки обратного звонка и корзины
+function fixScrollBlock() {
+	$('body').on('click', '.fix-scroll--btn', function(){
+		if($(this).closest('.fix-scroll').is('.open')) {
+			$(this).next('.fix-scroll--container').animate({'width': 0}, 400).closest('.fix-scroll').removeClass('open');
+		} else {
+			$(this).next('.fix-scroll--container').animate({'width': '281px'}, 400).closest('.fix-scroll').addClass('open');
+		}
+	});
+}
+
+
+// центрирование блока Обратный звонок и Корзина
+
+function fixScrollBlockCenter(speed){
+	var bodyHeight = $('body').height(),
+	fixBlockHeight = $('.fix-scroll--wrap').outerHeight();
+
+	if(!$('.fix-scroll--wrap').is('active')) {
+		$('.fix-scroll--wrap').animate({'top': (bodyHeight - fixBlockHeight) / 2 }, speed, function(){
+			$(this).addClass('active')
+		});
+	} else {
+		$('.fix-scroll--wrap').animate({'top': (bodyHeight - fixBlockHeight) / 2 }, speed);
+	}
+	
+}
+
+function menuDropDown(){
+	$('.h-menu li:has(.h-menu--dd)').addClass('slide');
+
+	var intervalID;
+
+	$(".h-menu .slide").hover(function () {
+		var popup = $(this).find(".h-menu--dd");
+
+		intervalID=setTimeout(
+			function() {
+				popup.fadeIn(300);
+			}, 100);
+	},
+
+	function () {
+		$(".h-menu .slide .h-menu--dd").fadeOut(300);
+		clearInterval(intervalID);
+	}
+	);
+}
+
+
+function menuSlideDown(){
+	$('.m-menu li:has(.m-menu--sd)').addClass('slide');
+
+	var intervalID;
+	
+	$('body').on('click', '.m-menu .slide .m-menu--pointer', function(){
+		var thisEl = $(this).closest('li');
+		if(thisEl.is('.open')) {
+			thisEl.removeClass('open').find('.m-menu--sd').slideUp(300);
+		} else {
+			thisEl.addClass('open').find('.m-menu--sd').slideDown(300);
+		}
+	});
+
+	$(".m-menu .slide").hover(function () {
+		var popup = $(this).find(".m-menu--dd");
+
+		intervalID=setTimeout(
+			function() {
+				popup.fadeIn(300);
+			}, 100);
+	},
+
+	function () {
+		$(".m-menu .slide .m-menu--dd").fadeOut(300);
+		clearInterval(intervalID);
+	}
+	);
+}
