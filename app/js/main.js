@@ -85,6 +85,7 @@ e.preventDefault();
 		byRow: false 
 	})
 
+$('.mh-2').matchHeight();
 
 
 
