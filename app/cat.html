@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>project</title>
+	<meta name="description" content=""> 
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.css">
+	<link rel="stylesheet" href="css/sprite.css">
+
+	<link type="text/css" href="css/slick.css" rel="stylesheet" media="all" />
+	<link type="text/css" href="css/slick-theme.css" rel="stylesheet" media="all" />
+
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js">
+	</script><script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<nav id="mobile-menu" class="slideout-menu">
+
+		<div class="slideout-menu--wrap">
+			<div class="m-menu hidden-sm">
+				<menu>
+					<li class="active"><a href="/">Главная</a></li>
+
+					<li class="slide">
+						<a class="m-menu--link-sd" href="">Статьи</a>
+						<span class="m-menu--pointer ico i-slide-m"></span>
+
+						<div class="m-menu--sd">
+							<menu>
+								<li><a href="">Советы</a></li>
+								<li><a href="">Как строить</a></li>
+								<li><a href="">Стандарты России</a></li>
+								<li><a href="">Росчет обьема</a></li>
+								<li><a href="">Сорта бетонна</a></li>
+								<li><a href="">Сейсостандарты</a></li>
+								<li><a href="">Эрозия бетонна</a></li>
+							</menu>
+						</div>
+					</li>
+
+					<li class="slide">
+						<a class="m-menu--link-sd" href="">Продукция</a>
+						<span class="m-menu--pointer ico i-slide-m"></span>
+
+						<div class="m-menu--sd">
+							<menu>
+								<li><a href="">Росчет обьема</a></li>
+								<li><a href="">Сорта бетонна</a></li>
+								<li><a href="">Сейсостандарты</a></li>
+								<li><a href="">Эрозия бетонна</a></li>
+							</menu>
+						</div>
+					</li>
+
+					<li class="slide">
+						<a class="m-menu--link-sd" href="">Производители</a>
+						<span class="m-menu--pointer ico i-slide-m"></span>
+
+						<div class="m-menu--sd">
+							<menu>
+								<li><a href="">Эрозия бетонна</a></li>
+								<li><a href="">Сорта бетонна</a></li>
+								<li><a href="">Росчет обьема</a></li>
+								<li><a href="">Сейсостандарты</a></li>
+							</menu>
+						</div>
+					</li>
+
+					<li>
+						<a href="">Как заказать</a>
+					</li>
+
+				</menu>
+			</div>
+
+
+			<div class="h-contacts">
+				<address class="h-contacts--row"><a class="c-white" href="">+7 (916) 778-07-75</a></address>
+				<address class="h-contacts--row"><a class="c-white" href="">main@betonnaya-logika.ru</a></address>
+			</div>
+
+
+			<div class="mobile-menu--enter js-slide-wrap">
+				<a href="" class="btn btn-white size-m btn-enter js-slide-btn">Вход</a>
+
+				<div class="js-slide">
+					<div class="text-l text-light mt20">ВОЙТИ В ЛИЧНЫЙ КАБИНЕТ</div>
+
+					<div class="form-b">
+						<form action="">
+							<div class="form-row">
+								<input type="text" placeholder="Ваш логин/номер тел." name="" id="" class="inp-white size-m field-text w100p">
+							</div>
+
+							<div class="form-row mt15">
+								<input type="password" placeholder="Ваш пароль" name="" id="" class="inp-white size-m field-text w100p">
+							</div>
+
+							<div class="form-row mt15 mb0 clearfix">
+								<button type="submit" class="btn-grey size-m btn btn-submit f-left">Войти</button>
+
+								<a href="#popup-reg" class="btn-grey size-m btn btn-submit f-right fancybox">Регистрация</a>
+							</div>
+
+							<div class="form-row mt10 align-right">
+								<span class="text-s"><a class="fancybox c-white" href="#popup-forgot">Забыли пароль?</a></span>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="mobile-menu--enter hidden-sm js-slide-wrap mt20">
+				<a href="" class="btn btn-white size-m btn-callback js-slide-btn ">
+					<i class="glyphicon glyphicon-phone"></i>
+					<span class="link-text">Обратный звонок</span>
+				</a>
+
+				<div class="js-slide">
+					<div class="fix-scroll--title mt20">Заказать бесплатный обратный звонок</div>
+
+					<div class="form-b">
+						<form action="">
+							<div class="form-row">
+								<input type="text" placeholder="Ваше имя" name="" id="" class="inp-white size-m field-text w100p">
+							</div>
+
+							<div class="form-row mt15">
+								<input type="text" placeholder="Ваш телефон" name="phone" id="" class="inp-white size-m field-text w100p">
+							</div>
+
+							<div class="form-row mt15 align-right mb0">
+								<button type="submit" class="btn-grey size-m btn btn-submit">Заказать</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</nav>
+
+
+
+
+	<div id="panel" class="wrapper-p">
+
+		<div class="section-1 header-bg">
+			<div class="hightlight"></div>
+			<div class="top-line">
+				<div class="container">
+					<div class="top-city">
+						<a href=""><i class="icon-icon-place"></i>Республика Крым</a>
+					</div>
+				</div>
+			</div>
+			<header class="header blur">
+				<div class="container">
+					<div class="row">
+						<div class="col-h-logo col-md-2 col-sm-3 col-xs-5">
+							<div class="h-logo">
+								<a href="/"><img src="img/logo_white.svg" alt=""></a>
+							</div>
+						</div>
+
+						<div class="col-md-2 col-xs-5 hidden-sm hidden-xxs">
+							<div class="h-contacts">
+								<address class="h-contacts--row"><a href="">+7 (916) 778-07-75</a></address>
+								<address class="h-contacts--row"><a href="">main@betonnaya-logika.ru</a></address>
+							</div>
+						</div>
+
+						<div class="h-menu col-md-7 col-sm-8 hidden-xs">
+							<menu>
+								<li class="active"><a href="/">Главная</a></li>
+
+								<li class="slide">
+									<a class="h-menu--link-dd" href="">Статьи</a>
+
+									<div class="h-menu--dd">
+										<menu>
+											<li><a href="">Советы</a></li>
+											<li><a href="">Как строить</a></li>
+											<li><a href="">Стандарты России</a></li>
+											<li><a href="">Росчет обьема</a></li>
+											<li><a href="">Сорта бетонна</a></li>
+											<li><a href="">Сейсостандарты</a></li>
+											<li><a href="">Эрозия бетонна</a></li>
+										</menu>
+									</div>
+								</li>
+
+								<li class="slide">
+									<a class="h-menu--link-dd" href="">Продукция</a>
+
+									<div class="h-menu--dd">
+										<menu>
+											<li><a href="">Росчет обьема</a></li>
+											<li><a href="">Сорта бетонна</a></li>
+											<li><a href="">Сейсостандарты</a></li>
+											<li><a href="">Эрозия бетонна</a></li>
+										</menu>
+									</div>
+								</li>
+
+								<li class="slide">
+									<a class="h-menu--link-dd" href="">Производители</a>
+
+									<div class="h-menu--dd">
+										<menu>
+											<li><a href="">Эрозия бетонна</a></li>
+											<li><a href="">Сорта бетонна</a></li>
+											<li><a href="">Росчет обьема</a></li>
+											<li><a href="">Сейсостандарты</a></li>
+										</menu>
+									</div>
+								</li>
+
+								<li>
+									<a href="">Как заказать</a>
+								</li>
+
+							</menu>
+						</div>
+
+						<div class="col-md-1 col-sm-2 hidden-sm hidden-xs">
+							<div class="h-enter js-dd-click-wrap">
+								<a href="" class="btn btn-grey size-m btn-block js-dd-click-btn">Вход</a>
+
+								<div class="js-dd-click h-enter--dd">
+									<div class="wrap">
+										<div class="text-l text-light">ВОЙТИ В ЛИЧНЫЙ КАБИНЕТ</div>
+
+										<div class="form-b mt10">
+											<form action="">
+												<div class="form-row">
+													<input type="text" placeholder="Ваш логин/номер тел." name="" id="" class="inp-white__blue size-m field-text w100p">
+												</div>
+
+												<div class="form-row mt15">
+													<input type="password" placeholder="Ваш пароль" name="" id="" class="inp-white__blue size-m field-text w100p">
+												</div>
+
+												<div class="form-row mt15 align-center">
+													<button type="submit" class="btn-grey size-m btn btn-submit">Войти</button>
+												</div>
+
+												<div class="form-row mt5 mb5 align-center">
+													<span class="text-s">или</span>
+												</div>
+
+												<div class="form-row mt5 align-center">
+													<a href="#popup-reg" class="btn-grey size-m btn btn-submit  fancybox">Регистрация</a>
+												</div>
+
+												<div class="form-row mt5 mb5 align-center">
+													<span class="text-s"><a class="fancybox" href="#popup-forgot">Забыли пароль?</a></span>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="slideout-btn col-sm-1 col-xs-2 hidden-md hidden-lg col-xs-2">
+							<button class="slideout-menu-btn"><i class="icon-menu"></i></button>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
+
+		<main class="content">
+			<div class="container">
+
+				<div class="title-cat img-prod">
+					<div class="active"><i class="ico icon-1-2"></i>Мебель для спальни</div>
+				</div>
+
+				<div class="main-filter">
+					<div class="filter-caption-wrap clearfix">
+						<div class="filter-caption-item active"><a class="btn btn-grey size-m" href="#">Кровати</a></div>
+						<div class="filter-caption-item"><a class="btn btn-grey size-m" href="#">Матрасы</a></div>
+						<div class="filter-caption-item"><a class="btn btn-grey size-m" href="#">Шкафы</a></div>
+						<div class="filter-caption-item"><a class="btn btn-grey size-m" href="#">Комоды</a></div>
+						<div class="filter-caption-item"><a class="btn btn-grey size-m" href="#">Тумбы</a></div>
+						<div class="filter-caption-item"><a class="btn btn-grey size-m" href="#">Комплекты</a></div>
+					</div>
+					<div class="filter-prop-wrap active">
+						<div class="clearfix">
+							<div class="filter-prop-item"><label for="">Город</label><select name="" id="" class="select-1">
+								<option value="">Симферополь</option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item"><label for="">Материал</label><select name="" id="" class="select-1">
+								<option value="">МДФ </option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item"><label for="">Размер</label><select name="" id="" class="select-1">
+								<option value="">Любой</option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item"><label for="">Цвет</label><select name="" id="" class="select-1">
+								<option value="">Любой</option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item"><label for="">Производитель</label><select name="" id="" class="select-1">
+								<option value="">Любой</option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item">
+								<a class="btn btn-grey size-m" href="#">Найти</a>
+							</div>
+						</div>
+					</div>
+					<div class="filter-prop-wrap">
+						<div class="clearfix">
+							<div class="filter-prop-item"><label for="">Город</label><select name="" id="" class="select-1">
+								<option value="">Симферополь</option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item"><label for="">Материал</label><select name="" id="" class="select-1">
+								<option value="">МДФ </option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item"><label for="">Размер</label><select name="" id="" class="select-1">
+								<option value="">Любой</option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item"><label for="">Цвет</label><select name="" id="" class="select-1">
+								<option value="">Любой</option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item"><label for="">Производитель</label><select name="" id="" class="select-1">
+								<option value="">Любой</option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item">
+								<a class="btn btn-grey size-m" href="#">Найти</a>
+							</div>
+						</div>
+					</div>
+					<div class="filter-prop-wrap">
+						<div class="clearfix">
+							<div class="filter-prop-item"><label for="">Город</label><select name="" id="" class="select-1">
+								<option value="">Симферополь</option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item"><label for="">Материал</label><select name="" id="" class="select-1">
+								<option value="">МДФ </option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item"><label for="">Размер</label><select name="" id="" class="select-1">
+								<option value="">Любой</option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item"><label for="">Цвет</label><select name="" id="" class="select-1">
+								<option value="">Любой</option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item"><label for="">Производитель</label><select name="" id="" class="select-1">
+								<option value="">Любой</option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item">
+								<a class="btn btn-grey size-m" href="#">Найти</a>
+							</div>
+						</div>
+					</div>
+					<div class="filter-prop-wrap">
+						<div class="clearfix">
+							<div class="filter-prop-item"><label for="">Город</label><select name="" id="" class="select-1">
+								<option value="">Симферополь</option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item"><label for="">Материал</label><select name="" id="" class="select-1">
+								<option value="">МДФ </option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item"><label for="">Размер</label><select name="" id="" class="select-1">
+								<option value="">Любой</option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item"><label for="">Цвет</label><select name="" id="" class="select-1">
+								<option value="">Любой</option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item"><label for="">Производитель</label><select name="" id="" class="select-1">
+								<option value="">Любой</option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item">
+								<a class="btn btn-grey size-m" href="#">Найти</a>
+							</div>
+						</div>
+					</div>
+					<div class="filter-prop-wrap">
+						<div class="clearfix">
+							<div class="filter-prop-item"><label for="">Город</label><select name="" id="" class="select-1">
+								<option value="">Симферополь</option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item"><label for="">Материал</label><select name="" id="" class="select-1">
+								<option value="">МДФ </option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item"><label for="">Размер</label><select name="" id="" class="select-1">
+								<option value="">Любой</option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item"><label for="">Цвет</label><select name="" id="" class="select-1">
+								<option value="">Любой</option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item"><label for="">Производитель</label><select name="" id="" class="select-1">
+								<option value="">Любой</option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item">
+								<a class="btn btn-grey size-m" href="#">Найти</a>
+							</div>
+						</div>
+					</div>
+					<div class="filter-prop-wrap">
+						<div class="clearfix">
+							<div class="filter-prop-item"><label for="">Город</label><select name="" id="" class="select-1">
+								<option value="">Симферополь</option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item"><label for="">Материал</label><select name="" id="" class="select-1">
+								<option value="">МДФ </option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item"><label for="">Размер</label><select name="" id="" class="select-1">
+								<option value="">Любой</option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item"><label for="">Цвет</label><select name="" id="" class="select-1">
+								<option value="">Любой</option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item"><label for="">Производитель</label><select name="" id="" class="select-1">
+								<option value="">Любой</option>
+								<option value="">lorem-2</option>
+								<option value="">lorem-3</option>
+							</select></div>
+							<div class="filter-prop-item">
+								<a class="btn btn-grey size-m" href="#">Найти</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				
+
+
+
+
+
+
+				<div class="content-title">
+					<div class="justify-c">
+						<div class="justify-item">
+							<div class="title-style dib">История Заказов</div>
+							<div class="dib position-stl">
+								<select name="sel1" class="select-arr-js">
+									<option value="">По Дате ↓</option>
+									<option value="">Lorem ipsum ↑</option>
+									<option value="">Lorem ipsum ↑</option>
+									<option value="">Lorem ipsum ↓</option>
+								</select>
+							</div>
+						</div>
+						<div class="justify-item">
+							<div class="filter-pager">
+								<span class="filter-page-item">12</span>
+								<a href="" class="filter-page-item">24</a>
+								<a href="" class="filter-page-item">48</a>
+							</div>
+						</div>
+					</div>	
+				</div>
+
+
+
+
+				<div class="navigation-menu pt0">
+					<div class="nav-wrapp">
+						<a href="#" class="pager-arrow page-prev"><i class="icon-left-arrow"></i></a>
+						<a href="" class="dot-page"></a>
+						<a href="" class="dot-page active"></a>
+						<a href="" class="dot-page"></a>
+						<a href="" class="dot-page"></a>
+						<a href="" class="dot-page"></a>
+						<a href="" class="dot-page"></a>
+						<a href="#" class="pager-arrow page-next"><i class="icon-right-arrow"></i></a>
+					</div>
+				</div>
+
+			</div>
+		</main>
+
+
+
+
+
+		<footer class="footer">
+			<div class="f-action">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-md-12 col-sm-12">
+							<h2>для получения акционных предложений введите номер телефона</h2>
+						</div>
+					</div>
+
+					<div class="f-action--form clearfix">
+						<form action="">
+							<div class="row">
+								<div class="col-sm-8 col-xs-8 col-md-8 mbxs">
+									<input type="text" name="phone" placeholder="Ваш телефон +7" id="" class="inp-white size-m field-text w100p">
+								</div>
+								<div class="col-sm-4 col-xs-4 col-md-4 mbxs">
+									<button type="submit" class="btn-grey size-m btn">Отправить</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="f-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+							<div class="f-logo">
+								<a href="/"><img src="img/logo_white.svg" alt=""></a>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-3 col-xs-6 col-xxs-12">
+							<div class="f-contacts">
+								<address>ооо”БЕТОННАЯ-ЛОГИКА.рф”</address>
+								<address>РФ. Республика Крым. Симферополь</address>
+								<address><a href="tel:+7(966)778-07-74">+7(966)778-07-74</a></address>
+								<address><a href="mailto:main@betonnya-logika.ru">main@betonnya-logika.ru</a></address>
+							</div>
+						</div>
+						<div class="">
+							<div class="col-md-3 col-sm-5 col-xs-12 col-xxs-12">
+								<div class="f-menu row">
+									<div>
+										<ul>
+											<li class="col-md-6 col-sm-6 col-xs-6"><a href="/post/index?slug=glavnaya">Главная</a></li>
+											<li class="col-md-6 col-sm-6 col-xs-6"><a href="/post/index?slug=company">Производители</a></li>
+											<li class="col-md-6 col-sm-6 col-xs-6"><a href="/post/index?slug=stati">Статьи</a></li>
+											<li class="col-md-6 col-sm-6 col-xs-6"><a href="/post/index?slug=stati">Контакты</a></li>
+											<li class="col-md-6 col-sm-6 col-xs-6"><a href="/post/index?slug=produkciya">Продукция</a></li>
+											<li class="col-md-6 col-sm-6 col-xs-6"><a href="/post/index?slug=kak-zakazat">Войти</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-12 col-xs-12 col-xxs-12">
+								<div class="f-soc">
+									<div class="f-soc--title">Мы в социальных сетях</div>
+									<div class="f-soc--list">
+										<a href="#" class="ico i-tw"></a>
+
+										<a href="#" class="ico i-vk"></a>
+
+										<a href="#" class="ico i-fb"></a>
+
+										<a href="#" class="ico i-gg"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<div class="fix-scroll--wrap">	
+			<div class="fix-scroll callback-fix hidden-xs">
+				<div class="fix-scroll--btn mh-2" onClick="">
+					<span class="icon">
+						<i class="ico ic-phone"></i>
+					</span>
+
+					<span class="text" style="height: 140px; ">
+						<span class="text-rotate">ЗАКАЗАТЬ  ЗВОНОК</span>
+					</span>
+				</div>
+
+				<div class="fix-scroll--container callback-fix--container mh-2">
+					<div class="wrap">
+						<div class="fix-scroll--title">Заказать бесплатный обратный звонок</div>
+
+						<div class="form-b">
+							<form action="">
+								<div class="form-row">
+									<input type="text" placeholder="Ваше имя" name="" id="" class="inp-white__brown size-m field-text w100p">
+								</div>
+
+								<div class="form-row mt15">
+									<input type="text" placeholder="Ваш телефон" name="phone" id="" class="inp-white__brown size-m field-text w100p">
+								</div>
+
+								<div class="form-row mt15 align-right">
+									<button type="submit" class="btn-grey size-m btn btn-submit">Заказать</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- кнопка Вверх -->
+		<div class="btn-top-container hidden-sm hidden-xs">
+			<div class="btn-top-wrap">
+				<span id="back-top">
+					<a href="#top"><span>ВВЕРХ</span></a>
+				</span>
+			</div><!-- end btn-top-wrap -->
+		</div><!-- end inner-wrapper -->
+
+
+	</div>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script src="js/libs.min.js"></script>
+	<script src="js/jquery.countdown.plugin.min.js"></script>
+	<script src="js/jquery.countdown.min.js"></script>
+	<script src="js/main.js"></script>
+
+
+</body>
+</html>
