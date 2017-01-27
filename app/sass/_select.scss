@@ -1,12 +1,13 @@
+
 .ik_select {
 	width: 180px;
 	height: 34px;
-	background-color: #fff;
+	background-color: transparent;
 	border: 1px solid #c1a285;
 	border-radius: 16px;
 	position: relative;	
 	cursor: default;
-	&:after {
+	&:before {
 		content: '\e906'; 
 		position: absolute;
 		left: 150px;
@@ -15,6 +16,7 @@
 		font-size: 13px;
 		color: #c1a285;
 		font-family: 'icomoon';
+		z-index: -1;
 	}
 }
 .ik_select_link {
@@ -42,16 +44,19 @@
 	font-size: 16px;
 	font-weight: 300;
 	position: relative;
-	// &:after {
-	// 	font-family: 'icomoon';
-	// 	content: '\e900';
-	// 	color: #4b4b4b;
-	// 	font-size: 8px;
-	// 	position: absolute;
-	// 	left: 100%;
-	// 	top: 55%;
-	// 	transform: translate(5px, -50%);
-	// }
+
+
+	&:after {
+		// font-family: 'icomoon';
+		// content: '\e908';
+		// content: attr(data-something, 'default');
+		// color: #4b4b4b;
+		// font-size: 8px;
+		// position: absolute;
+		// left: 100%;
+		// top: 55%;
+		// transform: translate(5px, -50%);
+	}
 }
 
 .ik_select_dropdown {
@@ -88,7 +93,7 @@
 		bottom: 100%;
 		right: 14px;
 	}
-		&:after {
+	&:after {
 		content: '';
 		display: block;
 		position: absolute;
@@ -111,12 +116,28 @@
 .ik_select_option {
 	/* Option */
 	color: #4b4b4b;
-font-size: 16px;
-font-weight: 300;
-padding: 8px 30px;
-&:last-child {
-	margin-bottom: 0;
-}
+	font-size: 16px;
+	font-weight: 300;
+	padding: 8px 30px;
+	display: block;
+	position: relative;
+	&:first-child:after {
+		font-family: 'icomoon';
+		// content: '\e908';
+		color: #4b4b4b;
+		font-size: 8px;
+		display: inline-block;
+		margin-left: 5px;
+		// position: absolute;
+		// left: 100%;
+		// top: 55%;
+		// transform: translate(5px, -50%);
+	}
+
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 .ik_select_option_label {
 	/* Option label */
@@ -138,4 +159,14 @@ padding: 8px 30px;
 }
 .ik_nothing_found {
 	/* Block that's shown when there's nothing found. */
+}
+
+
+
+.js-ccc, .js-ccc-dd {
+	sub {
+		font-size: 12px;
+		margin-left: 4px;
+		    vertical-align: middle;
+	}
 }

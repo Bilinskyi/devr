@@ -15,6 +15,30 @@ input.error {
 	border: 2px solid red !important;
 }
 
+
+.btn-edit {
+	display: inline-block;
+	vertical-align: middle;
+	text-decoration: none;
+	display: inline-block;
+	width: 34px;
+	height: 32px;
+	background-color: #c1a285;
+	border-radius: 16px;
+	position: relative;
+	&:hover {
+		opacity: .8;
+	}
+	.ic-pencil {
+		position: absolute;
+		margin: auto;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
+
 .select-1 {
 	font-size: 20px;
 	color: #4b4b4b;
@@ -57,18 +81,20 @@ input.error {
 
 .btn-grey {
 	color: #fff;
-	background-color: #c1a285;
 	border-radius: 16px;
 	position: relative;
 	border: none;
 
 	outline: none;
-	background-color: #c1a285;
-	background-image: linear-gradient(to top, #b28c68 0%, #b28c68 20%, #d7c2b0 100%);
+	background-color: #cca284;
+	background-image: linear-gradient(to top, #be8a63 0%, #be8a63 20%, #dcc1ae 100%);
 	box-shadow: 0 11px 29px rgba(0, 0, 0, 0.29);
 	&:hover {
 		background-image: none;
 		box-shadow: none;
+		&:after {
+			border: none;
+		}
 	}
 	&:active {
 		background-color: #ccc;

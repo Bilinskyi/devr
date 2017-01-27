@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>project</title>
+	<meta name="description" content=""> 
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.css">
+	<link rel="stylesheet" href="css/sprite.css">
+
+	<link type="text/css" href="css/slick.css" rel="stylesheet" media="all" />
+	<link type="text/css" href="css/slick-theme.css" rel="stylesheet" media="all" />
+
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js">
+	</script><script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<style>
+		@media (min-width: 200px) and (max-width: 767px) {
+			.catalog-table__search > table td:nth-of-type(2):before { content: "Марка смеси"; }
+			.catalog-table__search > table td:nth-of-type(3):before { content: "Наполнитель"; }
+			.catalog-table__search > table td:nth-of-type(4):before { content: "№ договора"; }
+			.catalog-table__search > table td:nth-of-type(5):before { content: "Статус"; }
+			.catalog-table__search > table td:nth-of-type(6):before { content: "Стоимость"; }
+			.catalog-table__search > table td:nth-of-type(7):before { content: "Объем для заказа"; }
+			.catalog-table__search > table td:nth-of-type(8):before { content: "Сумма"; }
+			.catalog-table__search > table td:nth-of-type(9):before { content: "Оформить"; }
+			.catalog-table__search > table td:nth-of-type(10):before { content: "Удалить"; }
+			
+			
+			.catalog-table__history > table td:nth-of-type(2):before { content: "Марка смеси"; }
+			.catalog-table__history > table td:nth-of-type(3):before { content: "Наполнитель"; }
+			.catalog-table__history > table td:nth-of-type(4):before { content: "№/Статус"; }
+			.catalog-table__history > table td:nth-of-type(5):before { content: "Дата"; }
+			.catalog-table__history > table td:nth-of-type(6):before { content: "Стоимость"; }
+			.catalog-table__history > table td:nth-of-type(7):before { content: "Объем"; }
+			.catalog-table__history > table td:nth-of-type(8):before { content: "Сумма"; }
+			.catalog-table__history > table td:nth-of-type(9):before { content: "Оценить"; }
+			.catalog-table__history > table td:nth-of-type(10):before { content: "Коммент."; }
+			
+		}
+	</style>
+</head>
+<body>
+	<nav id="mobile-menu" class="slideout-menu">
+
+		<div class="slideout-menu--wrap">
+			<div class="m-menu hidden-sm">
+				<menu>
+					<li class="active"><a href="/">Главная</a></li>
+
+					<li class="slide">
+						<a class="m-menu--link-sd" href="">Статьи</a>
+						<span class="m-menu--pointer ico i-slide-m"></span>
+
+						<div class="m-menu--sd">
+							<menu>
+								<li><a href="">Советы</a></li>
+								<li><a href="">Как строить</a></li>
+								<li><a href="">Стандарты России</a></li>
+								<li><a href="">Росчет обьема</a></li>
+								<li><a href="">Сорта бетонна</a></li>
+								<li><a href="">Сейсостандарты</a></li>
+								<li><a href="">Эрозия бетонна</a></li>
+							</menu>
+						</div>
+					</li>
+
+					<li class="slide">
+						<a class="m-menu--link-sd" href="">Продукция</a>
+						<span class="m-menu--pointer ico i-slide-m"></span>
+
+						<div class="m-menu--sd">
+							<menu>
+								<li><a href="">Росчет обьема</a></li>
+								<li><a href="">Сорта бетонна</a></li>
+								<li><a href="">Сейсостандарты</a></li>
+								<li><a href="">Эрозия бетонна</a></li>
+							</menu>
+						</div>
+					</li>
+
+					<li class="slide">
+						<a class="m-menu--link-sd" href="">Производители</a>
+						<span class="m-menu--pointer ico i-slide-m"></span>
+
+						<div class="m-menu--sd">
+							<menu>
+								<li><a href="">Эрозия бетонна</a></li>
+								<li><a href="">Сорта бетонна</a></li>
+								<li><a href="">Росчет обьема</a></li>
+								<li><a href="">Сейсостандарты</a></li>
+							</menu>
+						</div>
+					</li>
+
+					<li>
+						<a href="">Как заказать</a>
+					</li>
+
+				</menu>
+			</div>
+
+
+			<div class="h-contacts">
+				<address class="h-contacts--row"><a class="c-white" href="">+7 (916) 778-07-75</a></address>
+				<address class="h-contacts--row"><a class="c-white" href="">main@betonnaya-logika.ru</a></address>
+			</div>
+
+
+			<div class="mobile-menu--enter js-slide-wrap">
+				<a href="" class="btn btn-white size-m btn-enter js-slide-btn">Вход</a>
+
+				<div class="js-slide">
+					<div class="text-l text-light mt20">ВОЙТИ В ЛИЧНЫЙ КАБИНЕТ</div>
+
+					<div class="form-b">
+						<form action="">
+							<div class="form-row">
+								<input type="text" placeholder="Ваш логин/номер тел." name="" id="" class="inp-white size-m field-text w100p">
+							</div>
+
+							<div class="form-row mt15">
+								<input type="password" placeholder="Ваш пароль" name="" id="" class="inp-white size-m field-text w100p">
+							</div>
+
+							<div class="form-row mt15 mb0 clearfix">
+								<button type="submit" class="btn-grey size-m btn btn-submit f-left">Войти</button>
+
+								<a href="#popup-reg" class="btn-grey size-m btn btn-submit f-right fancybox">Регистрация</a>
+							</div>
+
+							<div class="form-row mt10 align-right">
+								<span class="text-s"><a class="fancybox c-white" href="#popup-forgot">Забыли пароль?</a></span>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="mobile-menu--enter hidden-sm js-slide-wrap mt20">
+				<a href="" class="btn btn-white size-m btn-callback js-slide-btn ">
+					<i class="glyphicon glyphicon-phone"></i>
+					<span class="link-text">Обратный звонок</span>
+				</a>
+
+				<div class="js-slide">
+					<div class="fix-scroll--title mt20">Заказать бесплатный обратный звонок</div>
+
+					<div class="form-b">
+						<form action="">
+							<div class="form-row">
+								<input type="text" placeholder="Ваше имя" name="" id="" class="inp-white size-m field-text w100p">
+							</div>
+
+							<div class="form-row mt15">
+								<input type="text" placeholder="Ваш телефон" name="phone" id="" class="inp-white size-m field-text w100p">
+							</div>
+
+							<div class="form-row mt15 align-right mb0">
+								<button type="submit" class="btn-grey size-m btn btn-submit">Заказать</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</nav>
+
+
+
+
+	<div id="panel" class="wrapper-p">
+
+		<div class="section-1 header-bg">
+			<div class="hightlight"></div>
+			<div class="top-line">
+				<div class="container">
+					<div class="top-city">
+						<a href=""><i class="icon-icon-place"></i>Республика Крым</a>
+					</div>
+				</div>
+			</div>
+			<header class="header blur">
+				<div class="container">
+					<div class="row">
+						<div class="col-h-logo col-md-2 col-sm-3 col-xs-5">
+							<div class="h-logo">
+								<a href="/"><img src="img/logo_white.svg" alt=""></a>
+							</div>
+						</div>
+
+						<div class="col-md-2 col-xs-5 hidden-sm hidden-xxs">
+							<div class="h-contacts">
+								<address class="h-contacts--row"><a href="">+7 (916) 778-07-75</a></address>
+								<address class="h-contacts--row"><a href="">main@betonnaya-logika.ru</a></address>
+							</div>
+						</div>
+
+						<div class="h-menu col-md-7 col-sm-8 hidden-xs">
+							<menu>
+								<li class="active"><a href="/">Главная</a></li>
+
+								<li class="slide">
+									<a class="h-menu--link-dd" href="">Статьи</a>
+
+									<div class="h-menu--dd">
+										<menu>
+											<li><a href="">Советы</a></li>
+											<li><a href="">Как строить</a></li>
+											<li><a href="">Стандарты России</a></li>
+											<li><a href="">Росчет обьема</a></li>
+											<li><a href="">Сорта бетонна</a></li>
+											<li><a href="">Сейсостандарты</a></li>
+											<li><a href="">Эрозия бетонна</a></li>
+										</menu>
+									</div>
+								</li>
+
+								<li class="slide">
+									<a class="h-menu--link-dd" href="">Продукция</a>
+
+									<div class="h-menu--dd">
+										<menu>
+											<li><a href="">Росчет обьема</a></li>
+											<li><a href="">Сорта бетонна</a></li>
+											<li><a href="">Сейсостандарты</a></li>
+											<li><a href="">Эрозия бетонна</a></li>
+										</menu>
+									</div>
+								</li>
+
+								<li class="slide">
+									<a class="h-menu--link-dd" href="">Производители</a>
+
+									<div class="h-menu--dd">
+										<menu>
+											<li><a href="">Эрозия бетонна</a></li>
+											<li><a href="">Сорта бетонна</a></li>
+											<li><a href="">Росчет обьема</a></li>
+											<li><a href="">Сейсостандарты</a></li>
+										</menu>
+									</div>
+								</li>
+
+								<li>
+									<a href="">Как заказать</a>
+								</li>
+
+							</menu>
+						</div>
+
+						<div class="col-md-1 col-sm-2 hidden-sm hidden-xs">
+							<div class="h-enter js-dd-click-wrap">
+								<a href="" class="btn btn-grey size-m btn-block js-dd-click-btn">Вход</a>
+
+								<div class="js-dd-click h-enter--dd">
+									<div class="wrap">
+										<div class="text-l text-light">ВОЙТИ В ЛИЧНЫЙ КАБИНЕТ</div>
+
+										<div class="form-b mt10">
+											<form action="">
+												<div class="form-row">
+													<input type="text" placeholder="Ваш логин/номер тел." name="" id="" class="inp-white__blue size-m field-text w100p">
+												</div>
+
+												<div class="form-row mt15">
+													<input type="password" placeholder="Ваш пароль" name="" id="" class="inp-white__blue size-m field-text w100p">
+												</div>
+
+												<div class="form-row mt15 align-center">
+													<button type="submit" class="btn-grey size-m btn btn-submit">Войти</button>
+												</div>
+
+												<div class="form-row mt5 mb5 align-center">
+													<span class="text-s">или</span>
+												</div>
+
+												<div class="form-row mt5 align-center">
+													<a href="#popup-reg" class="btn-grey size-m btn btn-submit  fancybox">Регистрация</a>
+												</div>
+
+												<div class="form-row mt5 mb5 align-center">
+													<span class="text-s"><a class="fancybox" href="#popup-forgot">Забыли пароль?</a></span>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="slideout-btn col-sm-1 col-xs-2 hidden-md hidden-lg col-xs-2">
+							<button class="slideout-menu-btn"><i class="icon-menu"></i></button>
+						</div>
+					</div>
+				</div>
+			</header>
+
+		</div>
+
+		<main class="content">
+			<div class="container">
+
+				<div class="lk-user border-b">
+					<div class="row">
+						<div class="col-md-2 col-sm-3 col-xs-4 w25">
+							<div class="lk-user--logo">
+								<span class="ava-round"><img src="img/ava1.jpg" alt=""></span>
+							</div>
+						</div>
+
+
+						<div class="col-md-5 col-sm-9 col-xs-8 w75">
+							<div class="lk-user--name">
+								Иванов И. И.
+							</div>
+
+							<div class="lk-user--city">
+								Севастополь
+							</div>
+						</div>
+
+						<div class="clearfix visible-xs visible-sm"></div>
+
+						<div class="mt20 visible-sm visible-xs"></div>
+
+						<div class="col-md-4 col-sm-4 col-xs-8 w75">
+							<div class="lk-user--contacts">
+								<address>Пользователь: Частное лицо</address>
+								<address>Телефон: +7 (030) 678 34 34 </address>
+								<address>Телефон: +7 (030) 678 34 36 </address>
+								<address>Почта: <a href="mailto:">dfhksjfh@jhg.ru</a></address>
+								<address>Адрес: РФ. Республика Крым. Ялта. ул. Ленина 43-24</address>
+							</div>
+						</div>
+
+
+						<div class="col-md-1 col-sm-1 col-xs-2 w25 align-right">
+							<a href="" class="btn-edit"  title="какой-то текст">
+								<i class="ico ic-pencil"></i>
+							</a>
+						</div>
+
+					</div>
+				</div>
+				
+				
+				
+				<div class="mb0 content-title__filter clearfix">
+					<h1>ТЕКУЩИЕ ЗАКАЗЫ</h1>
+				</div>
+				
+				
+				<div class="catalog-table catalog-table__search pl10 pr10">
+					<table>
+						<thead>
+							<!-- 
+								
+								для телефонной версии в <head> в <style> прописаны названия разделов (кроме первого, так как он скрывается)
+								
+							-->
+							<tr>
+								<th class="hidden-sm">Фирма</th>
+								<th>Название/Материал/Цвет</th>
+								<th>№ Договора</th>
+								<th>Статус</th>
+								<th>Стоимость</th>
+								<th>Объём для заказа </th>
+								<th>Сумма</th>
+								<th>Оформить</th>
+								<th style="text-align: center; ">Удолить</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							<tr>
+								<td class="hidden-sm hidden-xs">
+									<div class="catalog-col--logo">
+										<a href=""><img src="img/logo1.png" alt=""></a>
+									</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--marka">Кресло <span>Кожа-Ткань/беж</span></div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--doc c-light-grey">--- ----</div>
+								</td>
+
+								<td>
+									<div class="catalog-col--status">Оформление</div>
+									
+								</td>
+
+								<td>
+									<div class="catalog-col--price c-green">4 100 <small>руб</small></div>
+									<div class="catalog-col--dp">за шт</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--num">
+										<span class="calc-res">
+											<span class="calc-minus" onclick="">
+												<i class="ico-minus"></i>
+											</span>
+											<span class="calc-res--field">
+												<input class="calc-field" type="text" value="5">
+											</span>
+											<span class="calc-plus" onclick="">
+												<i class="ico-plus"></i>
+											</span>
+										</span>
+									</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--price c-green">82 000 <small>руб</small></div>
+									<div class="catalog-col--dp">за 15 м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--btn align-center">
+										<a href="" class="btn-green size-m btn btn-eq" title="какой-то текст">
+											<i class="icon_m-ok text-18"></i>
+										</a>
+									</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--btn align-center">
+										<a href="" class="btn-grey size-m btn btn-eq" title="какой-то текст">
+											<i class="icon_m-trash text-18"></i>
+										</a>
+									</div>
+								</td>
+							</tr>
+							
+							
+							<tr>
+								<td class="hidden-sm hidden-xs">
+									<div class="catalog-col--logo">
+										<a href=""><img src="img/logo2.png" alt=""></a>
+									</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--marka">М200</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--mat">Щебень</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--doc">345-7890</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--status">Формирование счета</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--price c-light-grey">4 100 <small>руб</small></div>
+									<div class="catalog-col--dp c-light-grey">за м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--num ">
+										<span class="calc-res disabled">
+											<!-- для неактивного состояния класс disabled -->
+											<span class="calc-minus" onClick="">
+												<i class="icon_m-minus"></i>
+											</span>
+
+											<span class="calc-res--field">
+												<input readonly class="calc-field" type="text" value="15" onkeyup="return calcProverka(this);" onchange="return calcProverka(this);" />
+												<span class="calc-res--sub"> м&sup3;</span>
+											</span>
+
+
+											<span class="calc-plus" onClick="">
+												<i class="icon_m-plus text-s"></i>
+											</span>
+										</span>
+									</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--price c-light-grey">82 000 <small>руб</small></div>
+									<div class="catalog-col--dp c-light-grey">за 15 м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--btn align-center">
+										<a href="" class="disabled btn-green size-m btn btn-eq btn-double" title="какой-то текст">
+											<i class="icon_m-clock text-18"></i>
+											<i class="icon_m-doc text-18"></i>
+										</a>
+									</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--btn align-center">
+										<!-- для неактивных ссылок добавлять  disabled. Обработка ссылки перекрыта с помощью preventDefault() -->
+										<a href="" class="disabled btn-grey size-m btn btn-eq" title="какой-то текст">
+											<i class="icon_m-trash text-18"></i>
+										</a>
+									</div>
+								</td>
+							</tr>
+							
+							
+							
+							<tr>
+								<td class="hidden-sm hidden-xs">
+									<div class="catalog-col--logo">
+										<a href=""><img src="img/logo3.png" alt=""></a>
+									</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--marka">М150</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--mat">песок</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--doc">345-7890</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--status">Ожидание оплаты</div>
+									<div class="catalog-col--countdown">
+										<!-- дата задается в формате "год, месяц, число, час, минута" -->
+										Осталось <span class="countdown" data-date="2016, 10, 17, 15, 12"></span>
+									</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--price c-light-grey">4 250 <small>руб</small></div>
+									<div class="catalog-col--dp c-light-grey">за м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--num ">
+										<span class="calc-res disabled">
+											<span class="calc-minus" onClick="">
+												<i class="icon_m-minus"></i>
+											</span>
+
+											<span class="calc-res--field">
+												<input class="calc-field" type="text" value="15" onkeyup="return calcProverka(this);" onchange="return calcProverka(this);" />
+												<span class="calc-res--sub"> м&sup3;</span>
+											</span>
+
+
+											<span class="calc-plus" onClick="">
+												<i class="icon_m-plus text-s"></i>
+											</span>
+										</span>
+									</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--price c-light-grey">63 000 <small>руб</small></div>
+									<div class="catalog-col--dp c-light-grey">за 15 м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--btn align-center">
+										<a href="" class="btn-grey size-m btn btn-eq btn-double" title="какой-то текст">
+											<i class="icon_m-clock text-18"></i>
+											<i class="icon_m-rouble text-18"></i>
+										</a>
+									</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--btn align-center">
+										<!-- для неактивных ссылок добавлять disabled. Обработка ссылки перекрыта с помощью preventDefault() -->
+										<a href="" class="disabled btn-grey size-m btn btn-eq" title="какой-то текст">
+											<i class="icon_m-trash text-18"></i>
+										</a>
+									</div>
+								</td>
+							</tr>
+							
+							
+							
+							<tr>
+								<td class="hidden-sm hidden-xs">
+									<div class="catalog-col--logo">
+										<a href=""><img src="img/logo4.png" alt=""></a>
+									</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--marka">М100</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--mat">Отсев</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--doc">345-7890</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--status c-green text-bold">Оплачено</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--price c-light-grey">4 100 <small>руб</small></div>
+									<div class="catalog-col--dp c-light-grey">за м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--num ">
+										<span class="calc-res disabled">
+											<span class="calc-minus" onClick="">
+												<i class="icon_m-minus"></i>
+											</span>
+
+											<span class="calc-res--field">
+												<input class="calc-field" type="text" value="15" onkeyup="return calcProverka(this);" onchange="return calcProverka(this);" />
+												<span class="calc-res--sub"> м&sup3;</span>
+											</span>
+
+
+											<span class="calc-plus" onClick="">
+												<i class="icon_m-plus text-s"></i>
+											</span>
+										</span>
+									</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--price c-light-grey">63 750 <small>руб</small></div>
+									<div class="catalog-col--dp c-light-grey">за 15 м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--btn align-center">
+										<a href="" class="btn-green size-m btn btn-eq btn-double" title="какой-то текст">
+											<i class="icon_m-ok text-18"></i>
+											<i class="icon_m-rouble text-18"></i>
+										</a>
+									</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--btn align-center">
+										<!-- для неактивных ссылок добавлять disabled. Обработка ссылки перекрыта с помощью preventDefault() -->
+										<a href="" class="disabled btn-grey size-m btn btn-eq" title="какой-то текст">
+											<i class="icon_m-trash text-18"></i>
+										</a>
+									</div>
+								</td>
+							</tr>
+							
+							
+							<tr>
+								<td class="hidden-sm hidden-xs">
+									<div class="catalog-col--logo">
+										<a href=""><img src="img/logo5.png" alt=""></a>
+									</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--marka">М100</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--mat">Щебень</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--doc c-light-grey">--- ---</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--status c-red text-bold">аннулировано</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--price c-green">4 100 <small>руб</small></div>
+									<div class="catalog-col--dp">за м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--num ">
+										<span class="calc-res">
+											<span class="calc-minus" onClick="">
+												<i class="icon_m-minus"></i>
+											</span>
+
+											<span class="calc-res--field">
+												<input class="calc-field" type="text" value="15" onkeyup="return calcProverka(this);" onchange="return calcProverka(this);" />
+												<span class="calc-res--sub"> м&sup3;</span>
+											</span>
+
+
+											<span class="calc-plus" onClick="">
+												<i class="icon_m-plus text-s"></i>
+											</span>
+										</span>
+									</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--price c-green">63 750 <small>руб</small></div>
+									<div class="catalog-col--dp">за 15 м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--btn align-center">
+										<a href="" class="btn-grey size-m btn btn-eq" title="какой-то текст">
+											<i class="icon_m-refresh text-18"></i>
+										</a>
+									</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--btn align-center">
+										<a href="" class="btn-red size-m btn btn-eq" title="какой-то текст">
+											<i class="icon_m-trash text-18"></i>
+										</a>
+									</div>
+								</td>
+							</tr>
+							
+							
+							
+							
+							<tr>
+								<td class="hidden-sm hidden-xs">
+									<div class="catalog-col--logo">
+										<a href=""><img src="img/logo4.png" alt=""></a>
+									</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--marka">М100</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--mat">Отсев</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--doc">345-7890</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--status c-green text-bold">Оплачено</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--price c-light-grey">4 100 <small>руб</small></div>
+									<div class="catalog-col--dp c-light-grey">за м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--num ">
+										<span class="calc-res disabled">
+											<span class="calc-minus" onClick="">
+												<i class="icon_m-minus"></i>
+											</span>
+
+											<span class="calc-res--field">
+												<input class="calc-field" type="text" value="15" onkeyup="return calcProverka(this);" onchange="return calcProverka(this);" />
+												<span class="calc-res--sub"> м&sup3;</span>
+											</span>
+
+
+											<span class="calc-plus" onClick="">
+												<i class="icon_m-plus text-s"></i>
+											</span>
+										</span>
+									</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--price c-light-grey">63 750 <small>руб</small></div>
+									<div class="catalog-col--dp c-light-grey">за 15 м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--btn align-center">
+										<a href="" class="btn-green size-m btn btn-eq btn-double" title="какой-то текст">
+											<i class="icon_m-ok text-18"></i>
+											<i class="icon_m-rouble text-18"></i>
+										</a>
+									</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--btn align-center">
+										<!-- для неактивных ссылок добавлять disabled. Обработка ссылки перекрыта с помощью preventDefault() -->
+										<a href="" class="disabled btn-grey size-m btn btn-eq" title="какой-то текст">
+											<i class="icon_m-trash text-18"></i>
+										</a>
+									</div>
+								</td>
+							</tr>
+							
+						</tbody>
+					</table>
+				</div>
+				<!-- end catalog-table -->
+
+
+
+
+
+				<div class="content-title mt40 mb0 pl0 pr0 content-title__filter clearfix">
+					<div class="container-fluid">
+						<div class="row">	
+							<div class="col-md-9 col-sm-10 col-xs-12">
+								<h1 class="dib">ИСТОРИЯ ЗАКАЗОВ</h1>
+
+								<div class="filter-sort w200">
+									<select name="" id="">
+										<option value="">По цене &darr;</option>
+										<option value="">По цене &uarr;</option>
+										<option value="">По производителю &darr;</option>
+										<option value="">По производителю &uarr;</option>
+									</select>
+								</div>
+							</div>
+							
+							<div class="clearfix visible-xs"></div>
+							
+							<div class="col-md-3 col-sm-2 col-xs-12 pull-right-sm pull-right-md pull-left-xs">
+								<div class="filter-pager pull-right-sm pull-right-md pull-left-xs">
+									<span class="filter-pager--item">12</span>
+									<a href="" class="filter-pager--item">24</a>
+									<a href="" class="filter-pager--item">48</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end content-title -->
+				
+				
+				
+				
+				<div class="catalog-table catalog-table__history pl10 pr10">
+					<table>
+						<thead>
+							<!-- 
+								
+								для телефонной версии в <head> в <style> прописаны названия разделов (кроме первого, так как он скрывается)
+								
+							-->
+							<tr>
+								<th class="hidden-sm">Фирма</th>
+								<th>Марка смеси</th>
+								<th>Наполнитель</th>
+								<th>№/Статус</th>
+								<th>Дата</th>
+								<th>Стоимость</th>
+								<th>Объем</th>
+								<th>Сумма</th>
+								<th>Оценить</th>
+								<th style="text-align: center; ">Коммент.</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							<tr>
+								<td class="hidden-sm hidden-xs">
+									<div class="catalog-col--logo">
+										<a href=""><img src="img/logo1.png" alt=""></a>
+									</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--marka">М200</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--mat">ОТСЕВ</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--doc">345-7891</div>
+									<div class="catalog-col--stat">Выполнено</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--date">24.09.2016</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--price c-green">4 100 <small>руб</small></div>
+									<div class="catalog-col--dp">за м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--v">8 м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--price c-green">82 000 <small>руб</small></div>
+									<div class="catalog-col--dp">за 15 м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="rate catalog-col--rate">
+										<span class="icon_m-star grey"></span>
+										<span class="icon_m-star grey"></span>
+										<span class="icon_m-star grey"></span>
+										<span class="icon_m-star grey"></span>
+										<span class="icon_m-star grey"></span>
+									</div>
+								</td>
+								
+								<td style="text-align: center; ">
+									<div class="catalog-col--opinions js-dd-click-wrap align-center">
+										<a href="" class="btn-green size-m btn btn-eq js-dd-click-btn" title="какой-то текст">
+											<i class="icon_m-opinions text-18"></i>
+										</a>
+										
+										
+										<div class="catalog-comment-dd js-dd-click">
+											<div class="wrap clearfix">
+												<div class="catalog-comment--header">
+													<div class="catalog-comment--title">Севастополь  М100  5 м&sup3; </div>
+													<div class="catalog-comment--name"><a href="">"Авто бетон" ООО</a></div>
+												</div>
+												
+												<div class="catalog-comment--text">
+													Бетон чёткий, лёг ровно, застыл 
+													за 3 часа, ВСЕ в ШОКЕ! Марка, 
+													похоже, выше заявленной
+												</div>
+
+
+												<div class="catalog-comment-dd--footer clearfix">
+													<div class="rate f-left">
+														<span class="icon_m-star active"></span>
+														<span class="icon_m-star active"></span>
+														<span class="icon_m-star active"></span>
+														<span class="icon_m-star half"></span>
+														<span class="icon_m-star"></span>
+													</div>
+													
+													<div class="catalog-comment--date f-right">22 августа 2016</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+								</td>
+							</tr>
+							
+							
+							<tr>
+								<td class="hidden-sm hidden-xs">
+									<div class="catalog-col--logo">
+										<a href=""><img src="img/logo2.png" alt=""></a>
+									</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--marka">М200</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--mat">Щебень</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--doc">345-7890</div>
+									<div class="catalog-col--stat">Выполнено</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--date">24.09.2016</div>
+									
+								</td>
+								
+								<td>
+									<div class="catalog-col--price c-green">4 100 <small>руб</small></div>
+									<div class="catalog-col--dp">за м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--v">2 м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--price c-green">82 000 <small>руб</small></div>
+									<div class="catalog-col--dp">за 15 м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="rate catalog-col--rate">
+										<span class="icon_m-star active"></span>
+										<span class="icon_m-star active"></span>
+										<span class="icon_m-star active"></span>
+										<span class="icon_m-star half"></span>
+										<span class="icon_m-star"></span>
+									</div>
+								</td>
+								
+								<td style="text-align: center; ">
+									<div class="catalog-col--opinions align-center js-dd-click-wrap">
+										<a href="" class="btn-grey size-m btn btn-eq js-dd-click-btn" title="какой-то текст">
+											<i class="icon_m-opinions text-18"></i>
+										</a>
+										
+										<div class="catalog-opinions-dd js-dd-click">
+											<div class="wrap clearfix symbol-count-wrap">
+												<div class="catalog-opinions--note">Для улучшения сервиса, рекомендуем оставить отзыв</div>
+
+												<form action="">
+													<textarea style="height: 115px; " name="" id="" placeholder="Ваш текст" class="inp-white__blue size-m field-text field-opinions w100p symbol-count mt10" maxlength="160"></textarea>
+													
+													<div class="mt15 clearfix align-right">
+														<div class="symbol-count-num">160</div>
+														
+														<input type="submit" value="Отправить" class="btn-blue size-m btn btn-submit ml5">
+													</div>
+													
+												</form>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							
+							
+							
+							<tr>
+								<td class="hidden-sm hidden-xs">
+									<div class="catalog-col--logo">
+										<a href=""><img src="img/logo3.png" alt=""></a>
+									</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--marka">М150</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--mat">песок</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--doc">345-7890</div>
+									<div class="catalog-col--stat">Выполнено</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--date">24.09.2016</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--price c-green">4 250 <small>руб</small></div>
+									<div class="catalog-col--dp">за м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--v">5 м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--price c-green">63 000 <small>руб</small></div>
+									<div class="catalog-col--dp">за 15 м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="rate catalog-col--rate">
+										<span class="icon_m-star grey"></span>
+										<span class="icon_m-star grey"></span>
+										<span class="icon_m-star grey"></span>
+										<span class="icon_m-star grey"></span>
+										<span class="icon_m-star grey"></span>
+									</div>
+								</td>
+								
+								<td style="text-align: center; ">
+									<div class="catalog-col--opinions align-center js-dd-click-wrap">
+										<a href="" class="btn-grey size-m btn btn-eq js-dd-click-btn" title="какой-то текст">
+											<i class="icon_m-opinions text-18"></i>
+										</a>
+										
+										<div class="catalog-opinions-dd js-dd-click">
+											<div class="wrap clearfix symbol-count-wrap">
+												<div class="catalog-opinions--note">Для улучшения сервиса, рекомендуем оставить отзыв</div>
+
+												<form action="">
+													<textarea style="height: 115px; " name="" id="" placeholder="Ваш текст" class="inp-white__blue size-m field-text field-opinions w100p symbol-count mt10" maxlength="160"></textarea>
+													
+													<div class="mt15 clearfix align-right">
+														<div class="symbol-count-num">160</div>
+														
+														<input type="submit" value="Отправить" class="btn-blue size-m btn btn-submit ml5">
+													</div>
+													
+												</form>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							
+							
+							
+							<tr>
+								<td class="hidden-sm hidden-xs">
+									<div class="catalog-col--logo">
+										<a href=""><img src="img/logo4.png" alt=""></a>
+									</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--marka">М100</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--mat">Отсев</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--doc">345-7890</div>
+									<div class="catalog-col--stat">Выполнено</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--date">24.09.2016</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--price c-green">4 100 <small>руб</small></div>
+									<div class="catalog-col--dp">за м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--v">12 м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--price c-green">63 750 <small>руб</small></div>
+									<div class="catalog-col--dp">за 15 м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="rate catalog-col--rate">
+										<span class="icon_m-star active"></span>
+										<span class="icon_m-star active"></span>
+										<span class="icon_m-star active"></span>
+										<span class="icon_m-star active"></span>
+										<span class="icon_m-star"></span>
+									</div>
+								</td>
+								
+								<td style="text-align: center; ">
+									<div class="catalog-col--opinions align-center js-dd-click-wrap">
+										<a href="" class="btn-grey size-m btn btn-eq js-dd-click-btn" title="какой-то текст">
+											<i class="icon_m-opinions text-18"></i>
+										</a>
+										
+										<div class="catalog-opinions-dd js-dd-click">
+											<div class="wrap clearfix symbol-count-wrap">
+												<div class="catalog-opinions--note">Для улучшения сервиса, рекомендуем оставить отзыв</div>
+
+												<form action="">
+													<textarea style="height: 115px; " name="" id="" placeholder="Ваш текст" class="inp-white__blue size-m field-text field-opinions w100p symbol-count mt10" maxlength="160"></textarea>
+													
+													<div class="mt15 clearfix align-right">
+														<div class="symbol-count-num">160</div>
+														
+														<input type="submit" value="Отправить" class="btn-blue size-m btn btn-submit ml5">
+													</div>
+													
+												</form>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							
+							
+							<tr>
+								<td class="hidden-sm hidden-xs">
+									<div class="catalog-col--logo">
+										<a href=""><img src="img/logo5.png" alt=""></a>
+									</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--marka">М100</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--mat">Щебень</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--doc">845-1938</div>
+									<div class="catalog-col--stat">Выполнено</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--date">24.09.2016</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--price c-green">4 100 <small>руб</small></div>
+									<div class="catalog-col--dp">за м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--v">15 м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--price c-green">63 750 <small>руб</small></div>
+									<div class="catalog-col--dp">за 15 м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="rate catalog-col--rate">
+										<span class="icon_m-star active"></span>
+										<span class="icon_m-star active"></span>
+										<span class="icon_m-star active"></span>
+										<span class="icon_m-star half"></span>
+										<span class="icon_m-star"></span>
+									</div>
+								</td>
+								
+								<td style="text-align: center; ">
+									<div class="catalog-col--opinions js-dd-click-wrap align-center">
+										<a href="" class="btn-green size-m btn btn-eq js-dd-click-btn" title="какой-то текст">
+											<i class="icon_m-opinions text-18"></i>
+										</a>
+										
+										
+										<div class="catalog-comment-dd js-dd-click">
+											<div class="wrap clearfix">
+												<div class="catalog-comment--header">
+													<div class="catalog-comment--title">Севастополь  М100  5 м&sup3; </div>
+													<div class="catalog-comment--name"><a href="">"Авто бетон" ООО</a></div>
+												</div>
+												
+												<div class="catalog-comment--text">
+													Бетон чёткий, лёг ровно, застыл 
+													за 3 часа, ВСЕ в ШОКЕ! Марка, 
+													похоже, выше заявленной
+												</div>
+
+
+												<div class="catalog-comment-dd--footer clearfix">
+													<div class="rate f-left">
+														<span class="icon_m-star active"></span>
+														<span class="icon_m-star active"></span>
+														<span class="icon_m-star active"></span>
+														<span class="icon_m-star half"></span>
+														<span class="icon_m-star"></span>
+													</div>
+													
+													<div class="catalog-comment--date f-right">22 августа 2016</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							
+							
+							
+							
+							<tr>
+								<td class="hidden-sm hidden-xs">
+									<div class="catalog-col--logo">
+										<a href=""><img src="img/logo4.png" alt=""></a>
+									</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--marka">М100</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--mat">Отсев</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--doc">345-7890</div>
+									<div class="catalog-col--stat">Выполнено</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--date">24.09.2016</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--price c-green">4 100 <small>руб</small></div>
+									<div class="catalog-col--dp">за м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--v">5 м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="catalog-col--price c-green">63 750 <small>руб</small></div>
+									<div class="catalog-col--dp">за 15 м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="rate catalog-col--rate">
+										<span class="icon_m-star active"></span>
+										<span class="icon_m-star active"></span>
+										<span class="icon_m-star half"></span>
+										<span class="icon_m-star"></span>
+										<span class="icon_m-star"></span>
+									</div>
+								</td>
+								
+								<td style="text-align: center; ">
+									<div class="catalog-col--opinions align-center js-dd-click-wrap">
+										<a href="" class="btn-grey size-m btn btn-eq js-dd-click-btn" title="какой-то текст">
+											<i class="icon_m-opinions text-18"></i>
+										</a>
+										
+										<div class="catalog-opinions-dd js-dd-click">
+											<div class="wrap clearfix symbol-count-wrap">
+												<div class="catalog-opinions--note">Для улучшения сервиса, рекомендуем оставить отзыв</div>
+
+												<form action="">
+													<textarea style="height: 115px; " name="" id="" placeholder="Ваш текст" class="inp-white__blue size-m field-text field-opinions w100p symbol-count mt10" maxlength="160"></textarea>
+													
+													<div class="mt15 clearfix align-right">
+														<div class="symbol-count-num">160</div>
+														
+														<input type="submit" value="Отправить" class="btn-blue size-m btn btn-submit ml5">
+													</div>
+													
+												</form>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							
+						</tbody>
+					</table>
+				</div>
+				
+
+
+				<nav class="pager">
+					<a class="pager-arrow pager-prev" href=""><i class="icon_m-pointer-left"></i></a>
+					
+					<a href="" class="pager-dot active"></a>
+					<a href="" class="pager-dot"></a>
+					<a href="" class="pager-dot"></a>
+					
+					<a class="pager-arrow pager-next" href=""><i class="icon_m-pointer-right"></i></a>
+				</nav>
+				
+			</div>
+		</main>
+
+
+
+
+
+		<footer class="footer">
+			<div class="f-action">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-md-12 col-sm-12">
+							<h2>для получения акционных предложений введите номер телефона</h2>
+						</div>
+					</div>
+
+					<div class="f-action--form clearfix">
+						<form action="">
+							<div class="row">
+								<div class="col-sm-8 col-xs-8 col-md-8 mbxs">
+									<input type="text" name="phone" placeholder="Ваш телефон +7" id="" class="inp-white size-m field-text w100p">
+								</div>
+								<div class="col-sm-4 col-xs-4 col-md-4 mbxs">
+									<button type="submit" class="btn-grey size-m btn">Отправить</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="f-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+							<div class="f-logo">
+								<a href="/"><img src="img/logo_white.svg" alt=""></a>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-3 col-xs-6 col-xxs-12">
+							<div class="f-contacts">
+								<address>ооо”БЕТОННАЯ-ЛОГИКА.рф”</address>
+								<address>РФ. Республика Крым. Симферополь</address>
+								<address><a href="tel:+7(966)778-07-74">+7(966)778-07-74</a></address>
+								<address><a href="mailto:main@betonnya-logika.ru">main@betonnya-logika.ru</a></address>
+							</div>
+						</div>
+						<div class="">
+							<div class="col-md-3 col-sm-5 col-xs-12 col-xxs-12">
+								<div class="f-menu row">
+									<div>
+										<ul>
+											<li class="col-md-6 col-sm-6 col-xs-6"><a href="/post/index?slug=glavnaya">Главная</a></li>
+											<li class="col-md-6 col-sm-6 col-xs-6"><a href="/post/index?slug=company">Производители</a></li>
+											<li class="col-md-6 col-sm-6 col-xs-6"><a href="/post/index?slug=stati">Статьи</a></li>
+											<li class="col-md-6 col-sm-6 col-xs-6"><a href="/post/index?slug=stati">Контакты</a></li>
+											<li class="col-md-6 col-sm-6 col-xs-6"><a href="/post/index?slug=produkciya">Продукция</a></li>
+											<li class="col-md-6 col-sm-6 col-xs-6"><a href="/post/index?slug=kak-zakazat">Войти</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-12 col-xs-12 col-xxs-12">
+								<div class="f-soc">
+									<div class="f-soc--title">Мы в социальных сетях</div>
+									<div class="f-soc--list">
+										<a href="#" class="ico i-tw"></a>
+
+										<a href="#" class="ico i-vk"></a>
+
+										<a href="#" class="ico i-fb"></a>
+
+										<a href="#" class="ico i-gg"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<div class="fix-scroll--wrap">	
+			<div class="fix-scroll callback-fix hidden-xs">
+				<div class="fix-scroll--btn mh-2" onClick="">
+					<span class="icon">
+						<i class="ico ic-phone"></i>
+					</span>
+					
+					<span class="text" style="height: 140px; ">
+						<span class="text-rotate">ЗАКАЗАТЬ  ЗВОНОК</span>
+					</span>
+				</div>
+				
+				<div class="fix-scroll--container callback-fix--container mh-2">
+					<div class="wrap">
+						<div class="fix-scroll--title">Заказать бесплатный обратный звонок</div>
+						
+						<div class="form-b">
+							<form action="">
+								<div class="form-row">
+									<input type="text" placeholder="Ваше имя" name="" id="" class="inp-white__brown size-m field-text w100p">
+								</div>
+								
+								<div class="form-row mt15">
+									<input type="text" placeholder="Ваш телефон" name="phone" id="" class="inp-white__brown size-m field-text w100p">
+								</div>
+								
+								<div class="form-row mt15 align-right">
+									<button type="submit" class="btn-grey size-m btn btn-submit">Заказать</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- кнопка Вверх -->
+		<div class="btn-top-container hidden-sm hidden-xs">
+			<div class="btn-top-wrap">
+				<span id="back-top">
+					<a href="#top"><span>ВВЕРХ</span></a>
+				</span>
+			</div><!-- end btn-top-wrap -->
+		</div><!-- end inner-wrapper -->
+
+
+	</div>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.js"></script>
+
+
+</body>
+</html>

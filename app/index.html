@@ -398,16 +398,18 @@
 			</div>
 		</div>
 
+
+
 		<div class="content-title container">
 			<div class="justify-c">
 				<div class="justify-item">
 					<div class="title-style dib">Популярные товары</div>
 					<div class="dib position-stl">
 						<select name="sel1" class="select-1">
-							<option value="">По цене ↑</option>
-							<option value="">Lorem ipsum.2</option>
-							<option value="">Lorem ipsum.3</option>
-							<option value="">Lorem ipsum.4</option>
+							<option value="">По цене ↓</option>
+							<option value="">Lorem ipsum ↑</option>
+							<option value="">Lorem ipsum ↑</option>
+							<option value="">Lorem ipsum ↓</option>
 						</select>
 					</div>
 				</div>
@@ -425,7 +427,7 @@
 		<div class="catalog-wrapp clearfix">
 			<div class="container">
 				<div class="row js-find-row">
-					<div class="col-md-3 col-sm-6 col-xs-12 item-c">
+					<div class="col-md-3 col-sm-4 col-xs-6 item-c">
 						<div class="catalog-wrapp-item">
 							<div class="v-code">#kro-348945</div>
 							<div class="catalog-item-imgwrapp">
@@ -466,7 +468,7 @@
 											<i class="ico-minus"></i>
 										</span>
 										<span class="calc-res--field">
-											<input class="calc-field" type="text" value="15">
+											<input class="calc-field" type="text" value="15" onkeyup="return calcProverka(this);" onchange="return calcProverka(this);">
 										</span>
 										<span class="calc-plus" onclick="">
 											<i class="ico-plus"></i>
@@ -483,7 +485,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 item-c">
+					<div class="col-md-3 col-sm-4 col-xs-6 item-c">
 						<div class="catalog-wrapp-item">
 							<div class="v-code">#tum-343489</div>
 							<div class="catalog-item-imgwrapp">
@@ -540,7 +542,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 item-c">
+					<div class="col-md-3 col-sm-4 col-xs-6 item-c">
 						<div class="catalog-wrapp-item">
 							<div class="v-code">#shk-348945</div>
 							<div class="catalog-item-imgwrapp">
@@ -596,7 +598,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 item-c">
+					<div class="col-md-3 col-sm-4 col-xs-6 item-c">
 						<div class="catalog-wrapp-item">
 							<div class="v-code">#kre-348945</div>
 							<div class="catalog-item-imgwrapp">
@@ -652,7 +654,7 @@
 						</div>
 					</div>
 
-					<div class="col-md-3 col-sm-6 col-xs-12 item-c">
+					<div class="col-md-3 col-sm-4 col-xs-6 item-c">
 						<div class="catalog-wrapp-item">
 							<div class="v-code">#kro-348945</div>
 							<div class="catalog-item-imgwrapp">
@@ -709,7 +711,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 item-c">
+					<div class="col-md-3 col-sm-4 col-xs-6 item-c">
 						<div class="catalog-wrapp-item">
 							<div class="v-code">#tum-343489</div>
 							<div class="catalog-item-imgwrapp">
@@ -764,7 +766,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 item-c">
+					<div class="col-md-3 col-sm-4 col-xs-6 item-c">
 						<div class="catalog-wrapp-item">
 							<div class="v-code">#shk-348945</div>
 							<div class="catalog-item-imgwrapp">
@@ -821,7 +823,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 item-c">
+					<div class="col-md-3 col-sm-4 col-xs-6 item-c">
 						<div class="catalog-wrapp-item">
 							<div class="v-code">#kre-348945</div>
 							<div class="catalog-item-imgwrapp">
@@ -878,7 +880,7 @@
 						</div>
 					</div>	
 
-					<div class="col-md-3 col-sm-6 col-xs-12 item-c">
+					<div class="col-md-3 col-sm-4 col-xs-6 item-c">
 						<div class="catalog-wrapp-item">
 							<div class="v-code">#kro-348945</div>
 							<div class="catalog-item-imgwrapp">
@@ -935,7 +937,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 item-c">
+					<div class="col-md-3 col-sm-4 col-xs-6 item-c">
 						<div class="catalog-wrapp-item">
 							<div class="v-code">#tum-343489</div>
 							<div class="catalog-item-imgwrapp">
@@ -990,7 +992,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 item-c">
+					<div class="col-md-3 col-sm-4 col-xs-6 item-c">
 						<div class="catalog-wrapp-item">
 							<div class="v-code">#shk-348945</div>
 							<div class="catalog-item-imgwrapp">
@@ -1047,7 +1049,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 item-c">
+					<div class="col-md-3 col-sm-4 col-xs-6 item-c">
 						<div class="catalog-wrapp-item">
 							<div class="v-code">#kre-348945</div>
 							<div class="catalog-item-imgwrapp">

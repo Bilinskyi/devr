@@ -18,7 +18,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 */
 .ico.i-fb {
   background-image: url(../img/sprite.png);
-  background-position: -50px -556px;
+  background-position: -100px -556px;
   width: 45px;
   height: 45px;
 }
@@ -30,25 +30,25 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .ico.i-slide-m {
   background-image: url(../img/sprite.png);
-  background-position: -644px -133px;
+  background-position: -664px -133px;
   width: 9px;
   height: 6px;
 }
 .open .ico.i-slide-m {
   background-image: url(../img/sprite.png);
-  background-position: -630px -133px;
+  background-position: -650px -133px;
   width: 9px;
   height: 6px;
 }
 .ico.i-tw {
   background-image: url(../img/sprite.png);
-  background-position: -150px -556px;
+  background-position: -50px -556px;
   width: 45px;
   height: 45px;
 }
 .ico.i-vk {
   background-image: url(../img/sprite.png);
-  background-position: -100px -556px;
+  background-position: -150px -556px;
   width: 45px;
   height: 45px;
 }
@@ -69,6 +69,12 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   background-position: -116px -372px;
   width: 111px;
   height: 110px;
+}
+.ico.ic-pencil {
+  background-image: url(../img/sprite.png);
+  background-position: -630px -133px;
+  width: 15px;
+  height: 19px;
 }
 .ico.ic-phone {
   background-image: url(../img/sprite.png);

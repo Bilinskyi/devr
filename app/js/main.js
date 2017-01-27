@@ -32,9 +32,9 @@ $(document).ready(function(){
 		})
 	});
 
-$('.top-tabs-caption').on('click', 'a', function(e) {
-e.preventDefault();
-});
+	$('.top-tabs-caption').on('click', 'a', function(e) {
+		e.preventDefault();
+	});
 
 	$(document).on('click', '.catalog-wrapp-item:not(.add)', function(e) {
 		e.preventDefault(); 
@@ -74,81 +74,119 @@ e.preventDefault();
 
 	});
 
-	$('.select-1').ikSelect({
-		autoWidth: false,
-		ddFullWidth: false
-	});
+// last SYMBOL
+function changeLastSymbol(lastNumber, lastSymbol, str) {
 
-	$('.mh-1').matchHeight();
-	$('.catalog-wrapp-item').matchHeight();
-	$('.wrapp-p').matchHeight({
-		byRow: false 
-	})
+	lastNumber = $('.ik_select_link_text').text().length-1;
+	lastSymbol = $('.ik_select_link_text').text().charAt(lastNumber);
+	console.log(lastSymbol);
+	str = $('.ik_select_link_text').text().slice(0, -1);
+	console.log(str + '<b>' +lastSymbol+'</b>');
+	$('.ik_select_link_text').html(str + '<sub>' +lastSymbol+'</sub>')
+
+}
+
+$(document).on('click', '.js-ccc-dd .ik_select_option', function() {
+
+	changeLastSymbol();
+
+});
+
+$('.select-1').ikSelect({
+	customClass: 'js-ccc',
+	autoWidth: false,
+	onInit: function (inst) {
+		changeLastSymbol();
+	},
+	onShow: function (inst) {
+		$('.ik_select_option').each(function() {
+			numb2 = $(this).text().length-1;
+			lastS2 = $(this).text().charAt(numb2);
+			console.log(lastS2);
+			var str2 = $(this).text().slice(0, -1);
+			$(this).find('span').html(str2 + '<sub>' +lastS2+'</sub>');
+		}); 
+		changeLastSymbol();
+	},
+	onKeyUp: function (inst) {
+		changeLastSymbol();
+	},
+	ddFullWidth: false
+});
+
+$('.mh-1').matchHeight();
+$('.catalog-wrapp-item').matchHeight();
+$('.wrapp-p').matchHeight({
+	byRow: false 
+})
 
 $('.mh-2').matchHeight();
 
+$('.top-tabs-content').matchHeight({
+	byRow: false 
+})
 
 
 
 
 
 
-	if($('.carousel-opinions').length) {
-		$('.carousel-opinions').slick({
-			dots: true,
-			infinite: true,
-			speed: 500,
-			slidesToShow: 3,
-			slidesToScroll: 1,
-			appendArrows: $(".carousel-opinions--arrows"),
-			appendDots: $(".carousel-opinions--dots"),
-			responsive: [
-			{
-				breakpoint: 992,
-				settings: {
-					slidesToShow: 2
-				}
-			},
-			{
-				breakpoint: 767,
-				settings: {
-					slidesToShow: 1
-				}
+if($('.carousel-opinions').length) {
+	$('.carousel-opinions').slick({
+		dots: true,
+		infinite: true,
+		speed: 500,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		appendArrows: $(".carousel-opinions--arrows"),
+		appendDots: $(".carousel-opinions--dots"),
+		responsive: [
+		{
+			breakpoint: 992,
+			settings: {
+				slidesToShow: 2
 			}
-			]
-		});
-	}
-
-
-	if($('.carousel-man').length) {
-		$('.carousel-man').slick({
-			dots: false,
-			infinite: true,
-			speed: 500,
-			slidesToShow: 6,
-			slidesToScroll: 1,
-			responsive: [
-			{
-				breakpoint: 992,
-				settings: {
-					slidesToShow: 4
-				}
-			},
-			{
-				breakpoint: 767,
-				settings: {
-					slidesToShow: 3
-				}
-			},
-			{
-				breakpoint: 479,
-				settings: {
-					slidesToShow: 2
-				}
+		},
+		{
+			breakpoint: 767,
+			settings: {
+				slidesToShow: 1
 			}
-			]
-		});
-	}
+		}
+		]
+	});
+}
+
+
+if($('.carousel-man').length) {
+	$('.carousel-man').slick({
+		dots: false,
+		infinite: true,
+		speed: 500,
+		slidesToShow: 6,
+		slidesToScroll: 1,
+		responsive: [
+		{
+			breakpoint: 992,
+			settings: {
+				slidesToShow: 4
+			}
+		},
+		{
+			breakpoint: 767,
+			settings: {
+				slidesToShow: 3
+			}
+		},
+		{
+			breakpoint: 479,
+			settings: {
+				slidesToShow: 2
+			}
+		}
+		]
+	});
+}
 
 
 
@@ -236,6 +274,7 @@ $(window).on('load', function() {
 	fixScrollBlock();
 	fixScrollBlockCenter(100);
 	jsSlide()
+	calcRes()
 
 });
 
@@ -363,3 +402,30 @@ function menuSlideDown(){
 	}
 	);
 }
+
+
+
+// поля с кнопками плюс/минус
+function calcRes() {
+	$('.calc-res').each(function() {
+		var $input = $(this).find('.calc-field');
+		$input.closest('.calc-res:not(.disabled)').on('click', '.calc-minus', function() {
+			var data = $input.val();
+
+			if(data >1) {
+				$input.val(parseInt(data) - 1);
+			}
+
+		});
+
+		$input.closest('.calc-res:not(.disabled)').on('click', '.calc-plus', function() {
+			var data = $input.val();
+			$input.val(parseInt(data) + 1 );
+
+		});
+	});
+}
+
+function calcProverka(input) { 
+	input.value = input.value.replace(/[^\d,]/g, '0');
+};
