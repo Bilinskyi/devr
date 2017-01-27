@@ -22,6 +22,9 @@ $(document).ready(function(){
 
 
 
+	$('body').on('click', 'a.disabled', function (e) {
+		e.preventDefault();
+	})
 
 	$(function() {
 		$('.top-tabs-caption').on('click', 'li:not(.active)', function() {
@@ -250,6 +253,91 @@ $(function () {
 
 
 
+
+
+
+
+
+
+
+
+$("body").on('click', '.js-dd-click-btn', function (e) {
+	e.preventDefault();
+
+
+
+	if($(this).closest('.js-dd-click-wrap').is('.open')) {
+		$(this).next('.js-dd-click').fadeOut(300).closest('.js-dd-click-wrap').removeClass('open');
+	} else {
+		$('.js-dd-click-wrap.open').removeClass('open').find('.js-dd-click').fadeOut(300);
+
+
+		if($(this).parents('.carousel').length) {
+			$(this).next('.js-dd-click').fadeIn(300).closest('.js-dd-click-wrap').addClass('open');
+
+			var posTop = $(this).closest('td').position().top,
+			thisHeight = $(this).next('.js-dd-click').outerHeight(),
+			parentHeight = $(this).closest('.carousel').outerHeight(),
+			posOffsetLeft = $(this).next('.js-dd-click').offset().left;
+
+			if((posTop + thisHeight + 30) > parentHeight ) {
+				$(this).next('.js-dd-click').addClass('up');
+			}
+
+			if(posOffsetLeft < 0) {
+				$(this).next('.js-dd-click').addClass('center');
+			} else {
+				$(this).next('.js-dd-click').removeClass('center');
+			}
+
+
+		} else {
+			$(this).next('.js-dd-click').fadeIn(300).closest('.js-dd-click-wrap').addClass('open');
+		}
+	}
+
+});
+
+
+
+// обработка клика по странице (для скрытия меню, popup и тд)
+$(document).click( function(event){
+	if( $(event.target).closest(".js-dd-click-wrap").length )
+		return;
+
+	$('.js-dd-click').fadeOut(300).closest('.js-dd-click-wrap').removeClass('open');
+	
+	
+	event.stopPropagation();
+	
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $('input,textarea').focus(function(){
 	$(this).data('placeholder',$(this).attr('placeholder'))
 	.attr('placeholder','');
@@ -275,6 +363,37 @@ $(window).on('load', function() {
 	fixScrollBlockCenter(100);
 	jsSlide()
 	calcRes()
+	symbolCount()
+	
+
+
+	if($('.countdown').length){
+		$('.countdown').each(function() {
+          var dateArr = $(this).data('date');//параметр из атрибута data
+          var re = /\s*,\s*/; //регулярка для разбивания строки на массив
+          
+          dateArr = dateArr.split(re);//массив даты
+          
+          dateArr[1] = parseInt(dateArr[1], 10) - 1;
+          
+          var countDate = new Date(
+              dateArr[0], //год
+              dateArr[1], //месяц
+              dateArr[2], //день
+              dateArr[3], //час
+              dateArr[4] //минуты
+              );
+          
+          
+          $(this).countdown({
+          	until: countDate,
+          	padZeroes: true,
+          	compact: true,
+          	format: 'HMS'
+          });
+        })
+	}
+
 
 });
 
@@ -429,3 +548,28 @@ function calcRes() {
 function calcProverka(input) { 
 	input.value = input.value.replace(/[^\d,]/g, '0');
 };
+
+
+
+
+
+
+
+
+// textarea
+function symbolCount(){
+	$(".symbol-count").keyup(function()
+	{
+		var thisElem = $(this).closest('.symbol-count-wrap'),
+		elemVal = $(this).val(),
+		elemLength = $(this).attr('maxlength') - elemVal.length;
+
+		if(elemLength >= 0) {
+			thisElem.find('.symbol-count-num').html(elemLength);
+		} else {
+			return false;
+		}
+		
+	});
+	
+}

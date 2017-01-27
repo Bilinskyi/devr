@@ -24,13 +24,13 @@ i {
 .flow-hidden {overflow: hidden}
 body {
   position: relative; 
-  color: #fff;
+  color: #4a4a4a;
   font-family: $rb;
   font-weight: 400;
   height: 100%;
-    min-height: 100%;
+  min-height: 100%;
   -webkit-font-smoothing: antialiased;
-    -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 ul {
@@ -425,11 +425,11 @@ a:hover {
 
 
 .w100p {
-    width: 100% !important;
+  width: 100% !important;
 }
 
 .hidden-xxs {
   @media #{$bp-xsmall} {
-        display: none;
+    display: none;
   }
 }

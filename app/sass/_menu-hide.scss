@@ -214,13 +214,19 @@ address {
 	}
 }
 
+.slideout-menu-btn {
+	@media #{$bp-xsmall} {
+		width: auto;
+		height: auto;
+		margin: 0;
+	}
+}
 .slideout-btn {
 	@media #{$bp-xsmall} {
 		position: absolute;
-		right: 10px;
 		top: 50%;
+		right: 0;
 		transform: translateY(-50%);
-		text-align: right;
 	}
 }
 

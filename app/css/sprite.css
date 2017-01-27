@@ -18,7 +18,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 */
 .ico.i-fb {
   background-image: url(../img/sprite.png);
-  background-position: -100px -556px;
+  background-position: -50px -556px;
   width: 45px;
   height: 45px;
 }
@@ -30,19 +30,19 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .ico.i-slide-m {
   background-image: url(../img/sprite.png);
-  background-position: -664px -133px;
+  background-position: -650px -178px;
   width: 9px;
   height: 6px;
 }
 .open .ico.i-slide-m {
   background-image: url(../img/sprite.png);
-  background-position: -650px -133px;
+  background-position: -653px -157px;
   width: 9px;
   height: 6px;
 }
 .ico.i-tw {
   background-image: url(../img/sprite.png);
-  background-position: -50px -556px;
+  background-position: -200px -556px;
   width: 45px;
   height: 45px;
 }
@@ -70,9 +70,21 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 111px;
   height: 110px;
 }
-.ico.ic-pencil {
+.ico.ic-comment {
   background-image: url(../img/sprite.png);
   background-position: -630px -133px;
+  width: 25px;
+  height: 19px;
+}
+.ico.ic-del {
+  background-image: url(../img/sprite.png);
+  background-position: -630px -178px;
+  width: 15px;
+  height: 18px;
+}
+.ico.ic-pencil {
+  background-image: url(../img/sprite.png);
+  background-position: -660px -133px;
   width: 15px;
   height: 19px;
 }
@@ -81,6 +93,12 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   background-position: -630px -94px;
   width: 33px;
   height: 34px;
+}
+.ico.ic-reload {
+  background-image: url(../img/sprite.png);
+  background-position: -630px -157px;
+  width: 18px;
+  height: 16px;
 }
 .ico.icon-1-1 {
   background-image: url(../img/sprite.png);
@@ -96,13 +114,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .ico.icon-1-2 {
   background-image: url(../img/sprite.png);
-  background-position: -320px -252px;
+  background-position: -480px 0px;
   width: 145px;
   height: 106px;
 }
 .top-tabs-item a:hover .ico.icon-1-2 {
   background-image: url(../img/sprite.png);
-  background-position: -480px 0px;
+  background-position: -320px -252px;
   width: 145px;
   height: 106px;
 }
@@ -120,13 +138,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .ico.icon-1-4 {
   background-image: url(../img/sprite.png);
-  background-position: -160px -252px;
+  background-position: 0px -252px;
   width: 155px;
   height: 115px;
 }
 .top-tabs-item a:hover .ico.icon-1-4 {
   background-image: url(../img/sprite.png);
-  background-position: 0px -252px;
+  background-position: -160px -252px;
   width: 155px;
   height: 115px;
 }
@@ -174,7 +192,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .ico.s-4 {
   background-image: url(../img/sprite.png);
-  background-position: -200px -556px;
+  background-position: -100px -556px;
   width: 45px;
   height: 45px;
 }

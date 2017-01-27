@@ -23,23 +23,23 @@
 
 	<style>
 		@media (min-width: 200px) and (max-width: 767px) {
-			.catalog-table__search > table td:nth-of-type(2):before { content: "Марка смеси"; }
-			.catalog-table__search > table td:nth-of-type(3):before { content: "Наполнитель"; }
-			.catalog-table__search > table td:nth-of-type(4):before { content: "№ договора"; }
+			.catalog-table__search > table td:nth-of-type(2):before { content: "Фирма"; }
+			.catalog-table__search > table td:nth-of-type(3):before { content: "Название/Материал/Цвет"; }
+			.catalog-table__search > table td:nth-of-type(4):before { content: "№ Договора"; }
 			.catalog-table__search > table td:nth-of-type(5):before { content: "Статус"; }
 			.catalog-table__search > table td:nth-of-type(6):before { content: "Стоимость"; }
-			.catalog-table__search > table td:nth-of-type(7):before { content: "Объем для заказа"; }
+			.catalog-table__search > table td:nth-of-type(7):before { content: "Объём для заказа "; }
 			.catalog-table__search > table td:nth-of-type(8):before { content: "Сумма"; }
 			.catalog-table__search > table td:nth-of-type(9):before { content: "Оформить"; }
 			.catalog-table__search > table td:nth-of-type(10):before { content: "Удалить"; }
 			
 			
-			.catalog-table__history > table td:nth-of-type(2):before { content: "Марка смеси"; }
-			.catalog-table__history > table td:nth-of-type(3):before { content: "Наполнитель"; }
+			.catalog-table__history > table td:nth-of-type(2):before { content: "Фирма"; }
+			.catalog-table__history > table td:nth-of-type(3):before { content: "Название/Материал/Цвет"; }
 			.catalog-table__history > table td:nth-of-type(4):before { content: "№/Статус"; }
 			.catalog-table__history > table td:nth-of-type(5):before { content: "Дата"; }
 			.catalog-table__history > table td:nth-of-type(6):before { content: "Стоимость"; }
-			.catalog-table__history > table td:nth-of-type(7):before { content: "Объем"; }
+			.catalog-table__history > table td:nth-of-type(7):before { content: "Объём "; }
 			.catalog-table__history > table td:nth-of-type(8):before { content: "Сумма"; }
 			.catalog-table__history > table td:nth-of-type(9):before { content: "Оценить"; }
 			.catalog-table__history > table td:nth-of-type(10):before { content: "Коммент."; }
@@ -304,7 +304,6 @@
 					</div>
 				</div>
 			</header>
-
 		</div>
 
 		<main class="content">
@@ -360,7 +359,7 @@
 				</div>
 				
 				
-				<div class="catalog-table catalog-table__search pl10 pr10">
+				<div class="catalog-table catalog-table__search">
 					<table>
 						<thead>
 							<!-- 
@@ -377,7 +376,7 @@
 								<th>Объём для заказа </th>
 								<th>Сумма</th>
 								<th>Оформить</th>
-								<th style="text-align: center; ">Удолить</th>
+								<th>Удалить</th>
 							</tr>
 						</thead>
 						
@@ -385,438 +384,306 @@
 							<tr>
 								<td class="hidden-sm hidden-xs">
 									<div class="catalog-col--logo">
-										<a href=""><img src="img/logo1.png" alt=""></a>
+										<a href=""><img src="img/logo-1.jpg" alt=""></a>
 									</div>
 								</td>
-								
+								<td><div class="catalog-col--marka">Кресло <span>Кожа-Ткань/беж</span></div></td>
+								<td><div class="catalog-col--doc c-light-grey">--- ----</div></td>
+								<td><div class="catalog-col--status">Оформление</div></td>
 								<td>
-									<div class="catalog-col--marka">Кресло <span>Кожа-Ткань/беж</span></div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--doc c-light-grey">--- ----</div>
-								</td>
-
-								<td>
-									<div class="catalog-col--status">Оформление</div>
-									
-								</td>
-
-								<td>
-									<div class="catalog-col--price c-green">4 100 <small>руб</small></div>
+									<div class="catalog-col--price">4 100 <small>руб</small></div>
 									<div class="catalog-col--dp">за шт</div>
 								</td>
-								
 								<td>
 									<div class="catalog-col--num">
 										<span class="calc-res">
-											<span class="calc-minus" onclick="">
+											<span class="calc-minus">
 												<i class="ico-minus"></i>
 											</span>
 											<span class="calc-res--field">
 												<input class="calc-field" type="text" value="5">
 											</span>
-											<span class="calc-plus" onclick="">
+											<span class="calc-plus">
 												<i class="ico-plus"></i>
 											</span>
 										</span>
 									</div>
 								</td>
-								
 								<td>
-									<div class="catalog-col--price c-green">82 000 <small>руб</small></div>
+									<div class="catalog-col--price">82 000 <small>руб</small></div>
 									<div class="catalog-col--dp">за 15 м&sup3;</div>
 								</td>
-								
 								<td>
 									<div class="catalog-col--btn align-center">
-										<a href="" class="btn-green size-m btn btn-eq" title="какой-то текст">
-											<i class="icon_m-ok text-18"></i>
+										<a href="" class="btn-green btn btn-st" title="какой-то текст">
+											<i class="icon-icon-check"></i>
 										</a>
 									</div>
 								</td>
-								
 								<td>
 									<div class="catalog-col--btn align-center">
-										<a href="" class="btn-grey size-m btn btn-eq" title="какой-то текст">
-											<i class="icon_m-trash text-18"></i>
+										<a href="" class="btn btn-brown btn-st" title="какой-то текст">
+											<i class="ico ic-del"></i>
 										</a>
 									</div>
 								</td>
 							</tr>
 							
-							
 							<tr>
 								<td class="hidden-sm hidden-xs">
 									<div class="catalog-col--logo">
-										<a href=""><img src="img/logo2.png" alt=""></a>
+										<a href=""><img src="img/logo-2.jpg" alt=""></a>
 									</div>
 								</td>
-								
+								<td><div class="catalog-col--marka">Пуфик <span>Кожа-Ткань/беж</span></div></td>
+								<td><div class="catalog-col--doc">345-7890</div></td>
+								<td><div class="catalog-col--status">Формирование счета</div></td>
 								<td>
-									<div class="catalog-col--marka">М200</div>
+									<div class="catalog-col--price col-disable">4 200 <small>руб</small></div>
+									<div class="catalog-col--dp col-disable">за шт</div>
 								</td>
-								
 								<td>
-									<div class="catalog-col--mat">Щебень</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--doc">345-7890</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--status">Формирование счета</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--price c-light-grey">4 100 <small>руб</small></div>
-									<div class="catalog-col--dp c-light-grey">за м&sup3;</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--num ">
+									<div class="catalog-col--num">
 										<span class="calc-res disabled">
-											<!-- для неактивного состояния класс disabled -->
-											<span class="calc-minus" onClick="">
-												<i class="icon_m-minus"></i>
+											<span class="calc-minus">
+												<i class="ico-minus"></i>
 											</span>
-
 											<span class="calc-res--field">
-												<input readonly class="calc-field" type="text" value="15" onkeyup="return calcProverka(this);" onchange="return calcProverka(this);" />
-												<span class="calc-res--sub"> м&sup3;</span>
+												<input class="calc-field" readonly type="text" value="5">
 											</span>
-
-
-											<span class="calc-plus" onClick="">
-												<i class="icon_m-plus text-s"></i>
+											<span class="calc-plus">
+												<i class="ico-plus"></i>
 											</span>
 										</span>
 									</div>
 								</td>
-								
 								<td>
-									<div class="catalog-col--price c-light-grey">82 000 <small>руб</small></div>
-									<div class="catalog-col--dp c-light-grey">за 15 м&sup3;</div>
+									<div class="catalog-col--price col-disable">82 000 <small>руб</small></div>
+									<div class="catalog-col--dp col-disable">за 15 м&sup3;</div>
 								</td>
-								
 								<td>
 									<div class="catalog-col--btn align-center">
-										<a href="" class="disabled btn-green size-m btn btn-eq btn-double" title="какой-то текст">
-											<i class="icon_m-clock text-18"></i>
-											<i class="icon_m-doc text-18"></i>
+										<a href="" class="disabled btn-green btn btn-st" title="какой-то текст">
+											<i class="icon-icon-time"></i>
+											<i class="icon-icon-sch"></i>
 										</a>
 									</div>
 								</td>
-								
 								<td>
 									<div class="catalog-col--btn align-center">
-										<!-- для неактивных ссылок добавлять  disabled. Обработка ссылки перекрыта с помощью preventDefault() -->
-										<a href="" class="disabled btn-grey size-m btn btn-eq" title="какой-то текст">
-											<i class="icon_m-trash text-18"></i>
+										<a href="" class="disabled btn btn-brown btn-st" title="какой-то текст">
+											<i class="ico ic-del"></i>
 										</a>
 									</div>
 								</td>
 							</tr>
 							
-							
-							
 							<tr>
 								<td class="hidden-sm hidden-xs">
 									<div class="catalog-col--logo">
-										<a href=""><img src="img/logo3.png" alt=""></a>
+										<a href=""><img src="img/logo-3.jpg" alt=""></a>
 									</div>
 								</td>
-								
-								<td>
-									<div class="catalog-col--marka">М150</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--mat">песок</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--doc">345-7890</div>
-								</td>
-								
+								<td><div class="catalog-col--marka">Стол <span>ДСП/беж</span></div></td>
+								<td><div class="catalog-col--doc">345-7891</div></td>
 								<td>
 									<div class="catalog-col--status">Ожидание оплаты</div>
 									<div class="catalog-col--countdown">
 										<!-- дата задается в формате "год, месяц, число, час, минута" -->
-										Осталось <span class="countdown" data-date="2016, 10, 17, 15, 12"></span>
+										Осталось <span class="countdown" data-date="2017, 01, 29, 15, 12"></span>
 									</div>
 								</td>
-								
 								<td>
-									<div class="catalog-col--price c-light-grey">4 250 <small>руб</small></div>
-									<div class="catalog-col--dp c-light-grey">за м&sup3;</div>
+									<div class="catalog-col--price col-disable">4 200 <small>руб</small></div>
+									<div class="catalog-col--dp col-disable">за шт</div>
 								</td>
-								
 								<td>
-									<div class="catalog-col--num ">
+									<div class="catalog-col--num">
 										<span class="calc-res disabled">
-											<span class="calc-minus" onClick="">
-												<i class="icon_m-minus"></i>
+											<span class="calc-minus">
+												<i class="ico-minus"></i>
 											</span>
-
 											<span class="calc-res--field">
-												<input class="calc-field" type="text" value="15" onkeyup="return calcProverka(this);" onchange="return calcProverka(this);" />
-												<span class="calc-res--sub"> м&sup3;</span>
+												<input class="calc-field" readonly type="text" value="5">
 											</span>
-
-
-											<span class="calc-plus" onClick="">
-												<i class="icon_m-plus text-s"></i>
+											<span class="calc-plus">
+												<i class="ico-plus"></i>
 											</span>
 										</span>
 									</div>
 								</td>
-								
 								<td>
-									<div class="catalog-col--price c-light-grey">63 000 <small>руб</small></div>
-									<div class="catalog-col--dp c-light-grey">за 15 м&sup3;</div>
+									<div class="catalog-col--price col-disable">82 000 <small>руб</small></div>
+									<div class="catalog-col--dp col-disable">за 15 м&sup3;</div>
 								</td>
-								
 								<td>
 									<div class="catalog-col--btn align-center">
-										<a href="" class="btn-grey size-m btn btn-eq btn-double" title="какой-то текст">
-											<i class="icon_m-clock text-18"></i>
-											<i class="icon_m-rouble text-18"></i>
+										<a href="" class="btn-brown btn btn-double btn-st" title="какой-то текст">
+											<i class="icon-icon-time"></i>
+											<i class="icon-rouble"></i>
 										</a>
 									</div>
 								</td>
-								
 								<td>
 									<div class="catalog-col--btn align-center">
-										<!-- для неактивных ссылок добавлять disabled. Обработка ссылки перекрыта с помощью preventDefault() -->
-										<a href="" class="disabled btn-grey size-m btn btn-eq" title="какой-то текст">
-											<i class="icon_m-trash text-18"></i>
+										<a href="" class="disabled btn btn-brown btn-st" title="какой-то текст">
+											<i class="ico ic-del"></i>
 										</a>
 									</div>
 								</td>
 							</tr>
-							
-							
-							
+
 							<tr>
-								<td class="hidden-sm hidden-xs">
+								<td class="hidden-sm hidden-xs add-pdn">
 									<div class="catalog-col--logo">
-										<a href=""><img src="img/logo4.png" alt=""></a>
+										<a href=""><img src="img/logo-4.jpg" alt=""></a>
 									</div>
 								</td>
-								
-								<td>
-									<div class="catalog-col--marka">М100</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--mat">Отсев</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--doc">345-7890</div>
-								</td>
-								
+								<td><div class="catalog-col--marka">Шкаф <span>ДСП/беж</span></div></td>
+								<td><div class="catalog-col--doc">345-7891</div></td>
 								<td>
 									<div class="catalog-col--status c-green text-bold">Оплачено</div>
 								</td>
-								
 								<td>
-									<div class="catalog-col--price c-light-grey">4 100 <small>руб</small></div>
-									<div class="catalog-col--dp c-light-grey">за м&sup3;</div>
+									<div class="catalog-col--price col-disable">4 100 <small>руб</small></div>
+									<div class="catalog-col--dp col-disable">за шт</div>
 								</td>
-								
 								<td>
-									<div class="catalog-col--num ">
+									<div class="catalog-col--num">
 										<span class="calc-res disabled">
-											<span class="calc-minus" onClick="">
-												<i class="icon_m-minus"></i>
+											<span class="calc-minus">
+												<i class="ico-minus"></i>
 											</span>
-
 											<span class="calc-res--field">
-												<input class="calc-field" type="text" value="15" onkeyup="return calcProverka(this);" onchange="return calcProverka(this);" />
-												<span class="calc-res--sub"> м&sup3;</span>
+												<input class="calc-field" readonly type="text" value="5">
 											</span>
-
-
-											<span class="calc-plus" onClick="">
-												<i class="icon_m-plus text-s"></i>
+											<span class="calc-plus">
+												<i class="ico-plus"></i>
 											</span>
 										</span>
 									</div>
 								</td>
-								
 								<td>
-									<div class="catalog-col--price c-light-grey">63 750 <small>руб</small></div>
-									<div class="catalog-col--dp c-light-grey">за 15 м&sup3;</div>
+									<div class="catalog-col--price col-disable">82 000 <small>руб</small></div>
+									<div class="catalog-col--dp col-disable">за 15 м&sup3;</div>
 								</td>
-								
 								<td>
 									<div class="catalog-col--btn align-center">
-										<a href="" class="btn-green size-m btn btn-eq btn-double" title="какой-то текст">
-											<i class="icon_m-ok text-18"></i>
-											<i class="icon_m-rouble text-18"></i>
+										<a href="" class="btn-green btn btn-double btn-st" title="какой-то текст">
+											<i class="icon-icon-check"></i>
+											<i class="icon-rouble"></i>
 										</a>
 									</div>
 								</td>
-								
 								<td>
 									<div class="catalog-col--btn align-center">
-										<!-- для неактивных ссылок добавлять disabled. Обработка ссылки перекрыта с помощью preventDefault() -->
-										<a href="" class="disabled btn-grey size-m btn btn-eq" title="какой-то текст">
-											<i class="icon_m-trash text-18"></i>
+										<a href="" class="disabled btn btn-brown btn-st" title="какой-то текст">
+											<i class="ico ic-del"></i>
 										</a>
 									</div>
 								</td>
 							</tr>
 							
-							
 							<tr>
 								<td class="hidden-sm hidden-xs">
 									<div class="catalog-col--logo">
-										<a href=""><img src="img/logo5.png" alt=""></a>
+										<a href=""><img src="img/logo-5.jpg" alt=""></a>
 									</div>
 								</td>
-								
+								<td><div class="catalog-col--marka">Диван+пуф <span>Кожа-Ткань/беж</span></div></td>
+								<td><div class="catalog-col--doc c-light-grey">--- ----</div></td>
+								<td><div class="catalog-col--status c-red text-bold">аннулировано</div></td>
 								<td>
-									<div class="catalog-col--marka">М100</div>
+									<div class="catalog-col--price">4 200 <small>руб</small></div>
+									<div class="catalog-col--dp">за шт</div>
 								</td>
-								
 								<td>
-									<div class="catalog-col--mat">Щебень</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--doc c-light-grey">--- ---</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--status c-red text-bold">аннулировано</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--price c-green">4 100 <small>руб</small></div>
-									<div class="catalog-col--dp">за м&sup3;</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--num ">
+									<div class="catalog-col--num">
 										<span class="calc-res">
-											<span class="calc-minus" onClick="">
-												<i class="icon_m-minus"></i>
+											<span class="calc-minus">
+												<i class="ico-minus"></i>
 											</span>
-
 											<span class="calc-res--field">
-												<input class="calc-field" type="text" value="15" onkeyup="return calcProverka(this);" onchange="return calcProverka(this);" />
-												<span class="calc-res--sub"> м&sup3;</span>
+												<input class="calc-field" type="text" value="5">
 											</span>
-
-
-											<span class="calc-plus" onClick="">
-												<i class="icon_m-plus text-s"></i>
+											<span class="calc-plus">
+												<i class="ico-plus"></i>
 											</span>
 										</span>
 									</div>
 								</td>
-								
 								<td>
-									<div class="catalog-col--price c-green">63 750 <small>руб</small></div>
+									<div class="catalog-col--price">82 000 <small>руб</small></div>
 									<div class="catalog-col--dp">за 15 м&sup3;</div>
 								</td>
-								
 								<td>
 									<div class="catalog-col--btn align-center">
-										<a href="" class="btn-grey size-m btn btn-eq" title="какой-то текст">
-											<i class="icon_m-refresh text-18"></i>
+										<a href="" class="btn-brown btn btn-st refresh" title="какой-то текст">
+											<i class="ico ic-reload"></i>
 										</a>
 									</div>
 								</td>
-								
 								<td>
 									<div class="catalog-col--btn align-center">
-										<a href="" class="btn-red size-m btn btn-eq" title="какой-то текст">
-											<i class="icon_m-trash text-18"></i>
+										<a href="" class="btn btn-red btn-st" title="какой-то текст">
+											<i class="ico ic-del"></i>
 										</a>
 									</div>
 								</td>
 							</tr>
-							
-							
-							
-							
+
 							<tr>
-								<td class="hidden-sm hidden-xs">
+								<td class="hidden-sm hidden-xs add-pdn">
 									<div class="catalog-col--logo">
-										<a href=""><img src="img/logo4.png" alt=""></a>
+										<a href=""><img src="img/logo-6.jpg" alt=""></a>
 									</div>
 								</td>
-								
-								<td>
-									<div class="catalog-col--marka">М100</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--mat">Отсев</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--doc">345-7890</div>
-								</td>
-								
+								<td><div class="catalog-col--marka">пуф <span>ДСП/беж</span></div></td>
+								<td><div class="catalog-col--doc">345-7891</div></td>
 								<td>
 									<div class="catalog-col--status c-green text-bold">Оплачено</div>
 								</td>
-								
 								<td>
-									<div class="catalog-col--price c-light-grey">4 100 <small>руб</small></div>
-									<div class="catalog-col--dp c-light-grey">за м&sup3;</div>
+									<div class="catalog-col--price col-disable">4 100 <small>руб</small></div>
+									<div class="catalog-col--dp col-disable">за шт</div>
 								</td>
-								
 								<td>
-									<div class="catalog-col--num ">
+									<div class="catalog-col--num">
 										<span class="calc-res disabled">
-											<span class="calc-minus" onClick="">
-												<i class="icon_m-minus"></i>
+											<span class="calc-minus">
+												<i class="ico-minus"></i>
 											</span>
-
 											<span class="calc-res--field">
-												<input class="calc-field" type="text" value="15" onkeyup="return calcProverka(this);" onchange="return calcProverka(this);" />
-												<span class="calc-res--sub"> м&sup3;</span>
+												<input class="calc-field" readonly type="text" value="5">
 											</span>
-
-
-											<span class="calc-plus" onClick="">
-												<i class="icon_m-plus text-s"></i>
+											<span class="calc-plus">
+												<i class="ico-plus"></i>
 											</span>
 										</span>
 									</div>
 								</td>
-								
 								<td>
-									<div class="catalog-col--price c-light-grey">63 750 <small>руб</small></div>
-									<div class="catalog-col--dp c-light-grey">за 15 м&sup3;</div>
+									<div class="catalog-col--price col-disable">82 000 <small>руб</small></div>
+									<div class="catalog-col--dp col-disable">за 15 м&sup3;</div>
 								</td>
-								
 								<td>
 									<div class="catalog-col--btn align-center">
-										<a href="" class="btn-green size-m btn btn-eq btn-double" title="какой-то текст">
-											<i class="icon_m-ok text-18"></i>
-											<i class="icon_m-rouble text-18"></i>
+										<a href="" class="btn-green btn btn-double btn-st" title="какой-то текст">
+											<i class="icon-icon-check"></i>
+											<i class="icon-rouble"></i>
 										</a>
 									</div>
 								</td>
-								
 								<td>
 									<div class="catalog-col--btn align-center">
-										<!-- для неактивных ссылок добавлять disabled. Обработка ссылки перекрыта с помощью preventDefault() -->
-										<a href="" class="disabled btn-grey size-m btn btn-eq" title="какой-то текст">
-											<i class="icon_m-trash text-18"></i>
+										<a href="" class="disabled btn btn-brown btn-st" title="какой-то текст">
+											<i class="ico ic-del"></i>
 										</a>
 									</div>
 								</td>
 							</tr>
 							
+
 						</tbody>
 					</table>
 				</div>
@@ -826,40 +693,32 @@
 
 
 
-				<div class="content-title mt40 mb0 pl0 pr0 content-title__filter clearfix">
-					<div class="container-fluid">
-						<div class="row">	
-							<div class="col-md-9 col-sm-10 col-xs-12">
-								<h1 class="dib">ИСТОРИЯ ЗАКАЗОВ</h1>
-
-								<div class="filter-sort w200">
-									<select name="" id="">
-										<option value="">По цене &darr;</option>
-										<option value="">По цене &uarr;</option>
-										<option value="">По производителю &darr;</option>
-										<option value="">По производителю &uarr;</option>
-									</select>
-								</div>
-							</div>
-							
-							<div class="clearfix visible-xs"></div>
-							
-							<div class="col-md-3 col-sm-2 col-xs-12 pull-right-sm pull-right-md pull-left-xs">
-								<div class="filter-pager pull-right-sm pull-right-md pull-left-xs">
-									<span class="filter-pager--item">12</span>
-									<a href="" class="filter-pager--item">24</a>
-									<a href="" class="filter-pager--item">48</a>
-								</div>
+				<div class="content-title container">
+					<div class="justify-c">
+						<div class="justify-item">
+							<div class="title-style dib">История Заказов</div>
+							<div class="dib position-stl">
+								<select name="sel1" class="select-1">
+									<option value="">По Дате ↓</option>
+									<option value="">Lorem ipsum ↑</option>
+									<option value="">Lorem ipsum ↑</option>
+									<option value="">Lorem ipsum ↓</option>
+								</select>
 							</div>
 						</div>
-					</div>
+						<div class="justify-item">
+							<div class="filter-pager">
+								<span class="filter-page-item">12</span>
+								<a href="" class="filter-page-item">24</a>
+								<a href="" class="filter-page-item">48</a>
+							</div>
+						</div>
+					</div>	
 				</div>
-				<!-- end content-title -->
-				
-				
-				
-				
-				<div class="catalog-table catalog-table__history pl10 pr10">
+
+
+
+				<div class="catalog-table catalog-table__history">
 					<table>
 						<thead>
 							<!-- 
@@ -869,173 +728,206 @@
 							-->
 							<tr>
 								<th class="hidden-sm">Фирма</th>
-								<th>Марка смеси</th>
-								<th>Наполнитель</th>
+								<th>Название/Материал/Цвет</th>
 								<th>№/Статус</th>
 								<th>Дата</th>
 								<th>Стоимость</th>
-								<th>Объем</th>
+								<th>Объём </th>
 								<th>Сумма</th>
 								<th>Оценить</th>
-								<th style="text-align: center; ">Коммент.</th>
+								<th>Комент.</th>
 							</tr>
 						</thead>
 						
 						<tbody>
 							<tr>
+
 								<td class="hidden-sm hidden-xs">
 									<div class="catalog-col--logo">
-										<a href=""><img src="img/logo1.png" alt=""></a>
+										<a href=""><img src="img/logo-1.jpg" alt=""></a>
 									</div>
 								</td>
 								
-								<td>
-									<div class="catalog-col--marka">М200</div>
-								</td>
+								<td><div class="catalog-col--marka">Кресло <span>Кожа-Ткань/беж</span></div></td>
+								
+								<td><div class="catalog-col--doc">345-7891 <span>Выполнено</span></div></td>
+								
+								<td><div class="catalog-col--date">24.09.2016</div></td>
 								
 								<td>
-									<div class="catalog-col--mat">ОТСЕВ</div>
+									<div class="catalog-col--price">4 100 <small>руб</small></div>
+									<div class="catalog-col--dp">за м&sup3;</div>
 								</td>
 								
-								<td>
-									<div class="catalog-col--doc">345-7891</div>
-									<div class="catalog-col--stat">Выполнено</div>
-								</td>
+								<td><div class="catalog-col--date">5 штук</div></td>
 								
 								<td>
-									<div class="catalog-col--date">24.09.2016</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--price c-green">4 100 <small>руб</small></div>
+									<div class="catalog-col--price">4 100 <small>руб</small></div>
 									<div class="catalog-col--dp">за м&sup3;</div>
 								</td>
 								
 								<td>
-									<div class="catalog-col--v">8 м&sup3;</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--price c-green">82 000 <small>руб</small></div>
-									<div class="catalog-col--dp">за 15 м&sup3;</div>
-								</td>
-								
-								<td>
-									<div class="rate catalog-col--rate">
-										<span class="icon_m-star grey"></span>
-										<span class="icon_m-star grey"></span>
-										<span class="icon_m-star grey"></span>
-										<span class="icon_m-star grey"></span>
-										<span class="icon_m-star grey"></span>
+									<div class="rate clearfix">
+										<span class="icon-full"></span>
+										<span class="icon-full"></span>
+										<span class="icon-full"></span>
+										<span class="icon-half"></span>
+										<span class=""></span>
 									</div>
 								</td>
 								
 								<td style="text-align: center; ">
 									<div class="catalog-col--opinions js-dd-click-wrap align-center">
-										<a href="" class="btn-green size-m btn btn-eq js-dd-click-btn" title="какой-то текст">
-											<i class="icon_m-opinions text-18"></i>
+
+										<a href="" class="btn-green btn btn-st js-dd-click-btn" title="какой-то текст">
+											<i class="ico ic-comment"></i>
 										</a>
 										
-										
 										<div class="catalog-comment-dd js-dd-click">
-											<div class="wrap clearfix">
+											<div class="wrap clearfix triagle-css">
 												<div class="catalog-comment--header">
-													<div class="catalog-comment--title">Севастополь  М100  5 м&sup3; </div>
+													<div class="catalog-comment--title">Севастополь</div>
 													<div class="catalog-comment--name"><a href="">"Авто бетон" ООО</a></div>
 												</div>
-												
 												<div class="catalog-comment--text">
 													Бетон чёткий, лёг ровно, застыл 
 													за 3 часа, ВСЕ в ШОКЕ! Марка, 
 													похоже, выше заявленной
 												</div>
-
-
 												<div class="catalog-comment-dd--footer clearfix">
-													<div class="rate f-left">
-														<span class="icon_m-star active"></span>
-														<span class="icon_m-star active"></span>
-														<span class="icon_m-star active"></span>
-														<span class="icon_m-star half"></span>
-														<span class="icon_m-star"></span>
+													<div class="rate clearfix">
+														<span class="icon-full"></span>
+														<span class="icon-full"></span>
+														<span class="icon-full"></span>
+														<span class="icon-half"></span>
+														<span class=""></span>
 													</div>
-													
 													<div class="catalog-comment--date f-right">22 августа 2016</div>
 												</div>
 											</div>
 										</div>
+
 									</div>
-									
 								</td>
 							</tr>
 							
 							
 							<tr>
+
 								<td class="hidden-sm hidden-xs">
 									<div class="catalog-col--logo">
-										<a href=""><img src="img/logo2.png" alt=""></a>
+										<a href=""><img src="img/logo-2.jpg" alt=""></a>
 									</div>
 								</td>
 								
-								<td>
-									<div class="catalog-col--marka">М200</div>
-								</td>
+								<td><div class="catalog-col--marka">Пуфик <span>Кожа-Ткань/беж</span></div></td>
+								
+								<td><div class="catalog-col--doc">345-7891 <span>Выполнено</span></div></td>
+								
+								<td><div class="catalog-col--date">24.09.2016</div></td>
 								
 								<td>
-									<div class="catalog-col--mat">Щебень</div>
+									<div class="catalog-col--price">4 100 <small>руб</small></div>
+									<div class="catalog-col--dp">за м&sup3;</div>
 								</td>
 								
-								<td>
-									<div class="catalog-col--doc">345-7890</div>
-									<div class="catalog-col--stat">Выполнено</div>
-								</td>
+								<td><div class="catalog-col--date">5 штук</div></td>
 								
 								<td>
-									<div class="catalog-col--date">24.09.2016</div>
-									
-								</td>
-								
-								<td>
-									<div class="catalog-col--price c-green">4 100 <small>руб</small></div>
+									<div class="catalog-col--price">4 100 <small>руб</small></div>
 									<div class="catalog-col--dp">за м&sup3;</div>
 								</td>
 								
 								<td>
-									<div class="catalog-col--v">2 м&sup3;</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--price c-green">82 000 <small>руб</small></div>
-									<div class="catalog-col--dp">за 15 м&sup3;</div>
-								</td>
-								
-								<td>
-									<div class="rate catalog-col--rate">
-										<span class="icon_m-star active"></span>
-										<span class="icon_m-star active"></span>
-										<span class="icon_m-star active"></span>
-										<span class="icon_m-star half"></span>
-										<span class="icon_m-star"></span>
+									<div class="rate clearfix disabled">
+										<span class="icon-full"></span>
+										<span class="icon-full"></span>
+										<span class="icon-full"></span>
+										<span class="icon-half"></span>
+										<span class=""></span>
 									</div>
 								</td>
 								
 								<td style="text-align: center; ">
 									<div class="catalog-col--opinions align-center js-dd-click-wrap">
-										<a href="" class="btn-grey size-m btn btn-eq js-dd-click-btn" title="какой-то текст">
-											<i class="icon_m-opinions text-18"></i>
+										<a href="" class="btn-brown btn btn-st js-dd-click-btn" title="какой-то текст">
+											<i class="ico ic-comment"></i>
 										</a>
 										
 										<div class="catalog-opinions-dd js-dd-click">
-											<div class="wrap clearfix symbol-count-wrap">
+											<div class="wrap clearfix symbol-count-wrap triagle-css">
 												<div class="catalog-opinions--note">Для улучшения сервиса, рекомендуем оставить отзыв</div>
 
 												<form action="">
-													<textarea style="height: 115px; " name="" id="" placeholder="Ваш текст" class="inp-white__blue size-m field-text field-opinions w100p symbol-count mt10" maxlength="160"></textarea>
+													<textarea style="height: 115px;" name="" id="" placeholder="Ваш текст" class="size-m field-text field-opinions w100p symbol-count mt10" maxlength="160"></textarea>
 													
 													<div class="mt15 clearfix align-right">
 														<div class="symbol-count-num">160</div>
 														
-														<input type="submit" value="Отправить" class="btn-blue size-m btn btn-submit ml5">
+														<input type="submit" value="Отправить" class="btn-f-brown size-m btn btn-submit ml5">
+													</div>
+													
+												</form>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+
+
+							<tr>
+
+								<td class="hidden-sm hidden-xs">
+									<div class="catalog-col--logo">
+										<a href=""><img src="img/logo-3.jpg" alt=""></a>
+									</div>
+								</td>
+								
+								<td><div class="catalog-col--marka">Стол <span>ДСП/беж</span></div></td>
+								
+								<td><div class="catalog-col--doc">345-7891 <span>Выполнено</span></div></td>
+								
+								<td><div class="catalog-col--date">24.09.2016</div></td>
+								
+								<td>
+									<div class="catalog-col--price">4 250 <small>руб</small></div>
+									<div class="catalog-col--dp">за м&sup3;</div>
+								</td>
+								
+								<td><div class="catalog-col--date">15 штук</div></td>
+								
+								<td>
+									<div class="catalog-col--price">4 100 <small>руб</small></div>
+									<div class="catalog-col--dp">за м&sup3;</div>
+								</td>
+								
+								<td>
+									<div class="rate clearfix disabled">
+										<span class="icon-full"></span>
+										<span class="icon-full"></span>
+										<span class="icon-full"></span>
+										<span class="icon-half"></span>
+										<span class=""></span>
+									</div>
+								</td>
+								
+								<td style="text-align: center; ">
+									<div class="catalog-col--opinions align-center js-dd-click-wrap">
+										<a href="" class="btn-brown btn btn-st js-dd-click-btn" title="какой-то текст">
+											<i class="ico ic-comment"></i>
+										</a>
+										
+										<div class="catalog-opinions-dd js-dd-click">
+											<div class="wrap clearfix symbol-count-wrap triagle-css">
+												<div class="catalog-opinions--note">Для улучшения сервиса, рекомендуем оставить отзыв</div>
+
+												<form action="">
+													<textarea style="height: 115px;" name="" id="" placeholder="Ваш текст" class="size-m field-text field-opinions w100p symbol-count mt10" maxlength="160"></textarea>
+													
+													<div class="mt15 clearfix align-right">
+														<div class="symbol-count-num">160</div>
+														
+														<input type="submit" value="Отправить" class="btn-f-brown size-m btn btn-submit ml5">
 													</div>
 													
 												</form>
@@ -1045,313 +937,131 @@
 								</td>
 							</tr>
 							
-							
-							
 							<tr>
-								<td class="hidden-sm hidden-xs">
-									<div class="catalog-col--logo">
-										<a href=""><img src="img/logo3.png" alt=""></a>
-									</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--marka">М150</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--mat">песок</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--doc">345-7890</div>
-									<div class="catalog-col--stat">Выполнено</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--date">24.09.2016</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--price c-green">4 250 <small>руб</small></div>
-									<div class="catalog-col--dp">за м&sup3;</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--v">5 м&sup3;</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--price c-green">63 000 <small>руб</small></div>
-									<div class="catalog-col--dp">за 15 м&sup3;</div>
-								</td>
-								
-								<td>
-									<div class="rate catalog-col--rate">
-										<span class="icon_m-star grey"></span>
-										<span class="icon_m-star grey"></span>
-										<span class="icon_m-star grey"></span>
-										<span class="icon_m-star grey"></span>
-										<span class="icon_m-star grey"></span>
-									</div>
-								</td>
-								
-								<td style="text-align: center; ">
-									<div class="catalog-col--opinions align-center js-dd-click-wrap">
-										<a href="" class="btn-grey size-m btn btn-eq js-dd-click-btn" title="какой-то текст">
-											<i class="icon_m-opinions text-18"></i>
-										</a>
-										
-										<div class="catalog-opinions-dd js-dd-click">
-											<div class="wrap clearfix symbol-count-wrap">
-												<div class="catalog-opinions--note">Для улучшения сервиса, рекомендуем оставить отзыв</div>
 
-												<form action="">
-													<textarea style="height: 115px; " name="" id="" placeholder="Ваш текст" class="inp-white__blue size-m field-text field-opinions w100p symbol-count mt10" maxlength="160"></textarea>
-													
-													<div class="mt15 clearfix align-right">
-														<div class="symbol-count-num">160</div>
-														
-														<input type="submit" value="Отправить" class="btn-blue size-m btn btn-submit ml5">
-													</div>
-													
-												</form>
-											</div>
-										</div>
-									</div>
-								</td>
-							</tr>
-							
-							
-							
-							<tr>
-								<td class="hidden-sm hidden-xs">
+								<td class="hidden-sm hidden-xs add-pdn">
 									<div class="catalog-col--logo">
-										<a href=""><img src="img/logo4.png" alt=""></a>
+										<a href=""><img src="img/logo-4.jpg" alt=""></a>
 									</div>
 								</td>
 								
-								<td>
-									<div class="catalog-col--marka">М100</div>
-								</td>
+								<td><div class="catalog-col--marka">Шкаф <span>ДСП/беж</span></div></td>
+								
+								<td><div class="catalog-col--doc">345-7891 <span>Выполнено</span></div></td>
+								
+								<td><div class="catalog-col--date">24.09.2016</div></td>
 								
 								<td>
-									<div class="catalog-col--mat">Отсев</div>
+									<div class="catalog-col--price">4 100 <small>руб</small></div>
+									<div class="catalog-col--dp">за м&sup3;</div>
 								</td>
 								
-								<td>
-									<div class="catalog-col--doc">345-7890</div>
-									<div class="catalog-col--stat">Выполнено</div>
-								</td>
+								<td><div class="catalog-col--date">5 штук</div></td>
 								
 								<td>
-									<div class="catalog-col--date">24.09.2016</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--price c-green">4 100 <small>руб</small></div>
+									<div class="catalog-col--price">4 100 <small>руб</small></div>
 									<div class="catalog-col--dp">за м&sup3;</div>
 								</td>
 								
 								<td>
-									<div class="catalog-col--v">12 м&sup3;</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--price c-green">63 750 <small>руб</small></div>
-									<div class="catalog-col--dp">за 15 м&sup3;</div>
-								</td>
-								
-								<td>
-									<div class="rate catalog-col--rate">
-										<span class="icon_m-star active"></span>
-										<span class="icon_m-star active"></span>
-										<span class="icon_m-star active"></span>
-										<span class="icon_m-star active"></span>
-										<span class="icon_m-star"></span>
-									</div>
-								</td>
-								
-								<td style="text-align: center; ">
-									<div class="catalog-col--opinions align-center js-dd-click-wrap">
-										<a href="" class="btn-grey size-m btn btn-eq js-dd-click-btn" title="какой-то текст">
-											<i class="icon_m-opinions text-18"></i>
-										</a>
-										
-										<div class="catalog-opinions-dd js-dd-click">
-											<div class="wrap clearfix symbol-count-wrap">
-												<div class="catalog-opinions--note">Для улучшения сервиса, рекомендуем оставить отзыв</div>
-
-												<form action="">
-													<textarea style="height: 115px; " name="" id="" placeholder="Ваш текст" class="inp-white__blue size-m field-text field-opinions w100p symbol-count mt10" maxlength="160"></textarea>
-													
-													<div class="mt15 clearfix align-right">
-														<div class="symbol-count-num">160</div>
-														
-														<input type="submit" value="Отправить" class="btn-blue size-m btn btn-submit ml5">
-													</div>
-													
-												</form>
-											</div>
-										</div>
-									</div>
-								</td>
-							</tr>
-							
-							
-							<tr>
-								<td class="hidden-sm hidden-xs">
-									<div class="catalog-col--logo">
-										<a href=""><img src="img/logo5.png" alt=""></a>
-									</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--marka">М100</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--mat">Щебень</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--doc">845-1938</div>
-									<div class="catalog-col--stat">Выполнено</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--date">24.09.2016</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--price c-green">4 100 <small>руб</small></div>
-									<div class="catalog-col--dp">за м&sup3;</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--v">15 м&sup3;</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--price c-green">63 750 <small>руб</small></div>
-									<div class="catalog-col--dp">за 15 м&sup3;</div>
-								</td>
-								
-								<td>
-									<div class="rate catalog-col--rate">
-										<span class="icon_m-star active"></span>
-										<span class="icon_m-star active"></span>
-										<span class="icon_m-star active"></span>
-										<span class="icon_m-star half"></span>
-										<span class="icon_m-star"></span>
+									<div class="rate clearfix">
+										<span class="icon-full"></span>
+										<span class="icon-full"></span>
+										<span class="icon-half"></span>
+										<span class=""></span>
+										<span class=""></span>
 									</div>
 								</td>
 								
 								<td style="text-align: center; ">
 									<div class="catalog-col--opinions js-dd-click-wrap align-center">
-										<a href="" class="btn-green size-m btn btn-eq js-dd-click-btn" title="какой-то текст">
-											<i class="icon_m-opinions text-18"></i>
+
+										<a href="" class="btn-green btn btn-st js-dd-click-btn" title="какой-то текст">
+											<i class="ico ic-comment"></i>
 										</a>
 										
-										
 										<div class="catalog-comment-dd js-dd-click">
-											<div class="wrap clearfix">
+											<div class="wrap clearfix triagle-css">
 												<div class="catalog-comment--header">
-													<div class="catalog-comment--title">Севастополь  М100  5 м&sup3; </div>
+													<div class="catalog-comment--title">Севастополь</div>
 													<div class="catalog-comment--name"><a href="">"Авто бетон" ООО</a></div>
 												</div>
-												
 												<div class="catalog-comment--text">
 													Бетон чёткий, лёг ровно, застыл 
 													за 3 часа, ВСЕ в ШОКЕ! Марка, 
 													похоже, выше заявленной
 												</div>
-
-
 												<div class="catalog-comment-dd--footer clearfix">
-													<div class="rate f-left">
-														<span class="icon_m-star active"></span>
-														<span class="icon_m-star active"></span>
-														<span class="icon_m-star active"></span>
-														<span class="icon_m-star half"></span>
-														<span class="icon_m-star"></span>
+													<div class="rate clearfix">
+														<span class="icon-full"></span>
+														<span class="icon-full"></span>
+														<span class="icon-full"></span>
+														<span class="icon-half"></span>
+														<span class=""></span>
 													</div>
-													
 													<div class="catalog-comment--date f-right">22 августа 2016</div>
 												</div>
 											</div>
 										</div>
+
 									</div>
 								</td>
 							</tr>
-							
-							
-							
-							
+
+
 							<tr>
+
 								<td class="hidden-sm hidden-xs">
 									<div class="catalog-col--logo">
-										<a href=""><img src="img/logo4.png" alt=""></a>
+										<a href=""><img src="img/logo-3.jpg" alt=""></a>
 									</div>
 								</td>
 								
-								<td>
-									<div class="catalog-col--marka">М100</div>
-								</td>
+								<td><div class="catalog-col--marka">Стол <span>ДСП/беж</span></div></td>
+								
+								<td><div class="catalog-col--doc">345-7891 <span>Выполнено</span></div></td>
+								
+								<td><div class="catalog-col--date">24.09.2016</div></td>
 								
 								<td>
-									<div class="catalog-col--mat">Отсев</div>
+									<div class="catalog-col--price">4 250 <small>руб</small></div>
+									<div class="catalog-col--dp">за м&sup3;</div>
 								</td>
 								
-								<td>
-									<div class="catalog-col--doc">345-7890</div>
-									<div class="catalog-col--stat">Выполнено</div>
-								</td>
+								<td><div class="catalog-col--date">15 штук</div></td>
 								
 								<td>
-									<div class="catalog-col--date">24.09.2016</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--price c-green">4 100 <small>руб</small></div>
+									<div class="catalog-col--price">4 100 <small>руб</small></div>
 									<div class="catalog-col--dp">за м&sup3;</div>
 								</td>
 								
 								<td>
-									<div class="catalog-col--v">5 м&sup3;</div>
-								</td>
-								
-								<td>
-									<div class="catalog-col--price c-green">63 750 <small>руб</small></div>
-									<div class="catalog-col--dp">за 15 м&sup3;</div>
-								</td>
-								
-								<td>
-									<div class="rate catalog-col--rate">
-										<span class="icon_m-star active"></span>
-										<span class="icon_m-star active"></span>
-										<span class="icon_m-star half"></span>
-										<span class="icon_m-star"></span>
-										<span class="icon_m-star"></span>
+									<div class="rate clearfix disabled">
+										<span class="icon-full"></span>
+										<span class="icon-full"></span>
+										<span class="icon-full"></span>
+										<span class="icon-half"></span>
+										<span class=""></span>
 									</div>
 								</td>
 								
 								<td style="text-align: center; ">
 									<div class="catalog-col--opinions align-center js-dd-click-wrap">
-										<a href="" class="btn-grey size-m btn btn-eq js-dd-click-btn" title="какой-то текст">
-											<i class="icon_m-opinions text-18"></i>
+										<a href="" class="btn-brown btn btn-st js-dd-click-btn" title="какой-то текст">
+											<i class="ico ic-comment"></i>
 										</a>
 										
 										<div class="catalog-opinions-dd js-dd-click">
-											<div class="wrap clearfix symbol-count-wrap">
+											<div class="wrap clearfix symbol-count-wrap triagle-css">
 												<div class="catalog-opinions--note">Для улучшения сервиса, рекомендуем оставить отзыв</div>
 
 												<form action="">
-													<textarea style="height: 115px; " name="" id="" placeholder="Ваш текст" class="inp-white__blue size-m field-text field-opinions w100p symbol-count mt10" maxlength="160"></textarea>
+													<textarea style="height: 115px;" name="" id="" placeholder="Ваш текст" class="size-m field-text field-opinions w100p symbol-count mt10" maxlength="160"></textarea>
 													
 													<div class="mt15 clearfix align-right">
 														<div class="symbol-count-num">160</div>
 														
-														<input type="submit" value="Отправить" class="btn-blue size-m btn btn-submit ml5">
+														<input type="submit" value="Отправить" class="btn-f-brown size-m btn btn-submit ml5">
 													</div>
 													
 												</form>
@@ -1360,6 +1070,20 @@
 									</div>
 								</td>
 							</tr>
+
+							<tr class="false-border">
+								<td class="hidden-sm hidden-xs"></td>
+								<td colspan="7">
+								</td>
+								<td>
+									<div class="catalog-col--btn align-center">
+										<a href="" class="btn btn-red btn-st" title="какой-то текст">
+											<i class="ico ic-del"></i>
+										</a>
+									</div>
+								</td>
+							</tr>
+							
 							
 						</tbody>
 					</table>
@@ -1367,15 +1091,18 @@
 				
 
 
-				<nav class="pager">
-					<a class="pager-arrow pager-prev" href=""><i class="icon_m-pointer-left"></i></a>
-					
-					<a href="" class="pager-dot active"></a>
-					<a href="" class="pager-dot"></a>
-					<a href="" class="pager-dot"></a>
-					
-					<a class="pager-arrow pager-next" href=""><i class="icon_m-pointer-right"></i></a>
-				</nav>
+				<div class="navigation-menu pt0">
+					<div class="nav-wrapp">
+						<a href="#" class="pager-arrow page-prev"><i class="icon-left-arrow"></i></a>
+						<a href="" class="dot-page"></a>
+						<a href="" class="dot-page active"></a>
+						<a href="" class="dot-page"></a>
+						<a href="" class="dot-page"></a>
+						<a href="" class="dot-page"></a>
+						<a href="" class="dot-page"></a>
+						<a href="#" class="pager-arrow page-next"><i class="icon-right-arrow"></i></a>
+					</div>
+				</div>
 				
 			</div>
 		</main>
@@ -1510,6 +1237,8 @@
 
 	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 	<script src="js/libs.min.js"></script>
+	<script src="js/jquery.countdown.plugin.min.js"></script>
+	<script src="js/jquery.countdown.min.js"></script>
 	<script src="js/main.js"></script>
 
 

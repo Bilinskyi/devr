@@ -23,7 +23,7 @@ input.error {
 	display: inline-block;
 	width: 34px;
 	height: 32px;
-	background-color: #c1a285;
+	background-color: #cda385;
 	border-radius: 16px;
 	position: relative;
 	&:hover {
@@ -76,8 +76,86 @@ input.error {
 	&:hover {
 		cursor: pointer;
 	}
+
 }
 
+a.refresh {
+	i {
+		transition: all 0.25s ease;
+	}
+	&:hover {
+		i {
+			transform: rotate(90deg);
+		}
+	}
+}
+
+.btn-f-brown {
+		outline: none;
+		border: none;
+		width: 114px;
+		height: 32px;
+		background-color: #cda385;
+		border-radius: 16px;
+		text-align: center;
+		padding: 0 !important;
+}
+.btn-st {
+	min-width: 80px !important;
+	height: 32px;
+	line-height: 32px;
+	border-radius: 16px;
+	position: relative;
+	text-align: center;
+	transition: all 0.25s ease;
+	@media #{$bp-medium} {
+	      min-width: 50px !important;
+	}
+	@media #{$bp-small} {
+	      min-width: 60px !important;
+	}
+	
+	&:hover {
+		opacity: .8;
+	}
+	&.disabled {
+		background-color: #ccc;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	i {
+		display: inline-block;
+		position: relative;
+		vertical-align: middle;
+		color: #fff;
+		font-size: 16px;
+	}
+	.icon-icon-check {
+		font-size: 14px;	
+		line-height: 32px;
+		color: #fff;
+	}
+	.icon-rouble {
+		font-size: 18px;
+	}
+	.icon-icon-time {
+		font-size: 17px;
+	}
+}
+
+.btn-green {
+	background-color: #6dc72a;
+}
+
+
+.btn-brown {
+	background-color: #cda385;
+}
+
+.btn-red {
+	background-color: red;
+}
 
 .btn-grey {
 	color: #fff;
