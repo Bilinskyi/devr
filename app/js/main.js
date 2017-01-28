@@ -50,7 +50,11 @@ $(document).ready(function(){
 
 
 
+	$(".fancybox").fancybox({
+		margin: 15
+	});
 	
+	$("input:checkbox").uniform();
 
 
 
@@ -89,9 +93,9 @@ $(document).ready(function(){
 			opacity: '1'
 		},300);
 
-		// $('html, body').animate({
-  //       scrollTop: $($('.js-find-row').children('.hide-content')).offset().top -70
-  //   }, 500);
+		$('html, body').animate({
+			scrollTop: $($('.js-find-row').children('.hide-content')).offset().top -80
+		}, 400);
 
 
 // Слайдер каталог
@@ -451,6 +455,7 @@ $(window).on('load', function() {
 	jsSlide()
 	calcRes()
 	symbolCount()
+	jsSlideArticle();
 
 
 
@@ -669,3 +674,36 @@ function symbolCount(){
 	});
 
 }
+
+
+//js-article (раскрываемые блоки)
+function jsSlideArticle(){
+	$('body').on('click', '.js-article-btn', function(e){
+		e.preventDefault();
+		var th1 = $(this);
+		if($(this).closest('.js-article-wrap').is('.open')) {
+			th1.hide();
+			$(this).html($(this).data('text1'));
+			$(this).closest('.js-article-wrap').removeClass('open').find('.js-article').animate({
+				opacity: '0'
+			},300, function() {
+				$(this).slideUp(300,function() {
+					th1.show();
+				});
+			});
+		} else {
+			$(this).html($(this).data('text2'));
+			th1.hide();
+			$(this).closest('.js-article-wrap').addClass('open').find('.js-article').slideDown(300, function() {
+				th1.show();
+				$(this).animate({
+					opacity: '1'
+				}, 300);
+			});
+		}
+		
+	});
+}
+
+
+
