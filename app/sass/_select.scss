@@ -8,9 +8,9 @@
 	position: relative;	
 	cursor: default;
 	&:before {
-		content: '\e90c'; 
+		content: '\e90b'; 
 		position: absolute;
-		left: 150px;
+		right: 5%;
 		top: 50%;
 		transform: translateY(-50%);
 		font-size: 13px;
@@ -44,6 +44,14 @@
 	font-size: 16px;
 	font-weight: 300;
 	position: relative;
+	@media #{$bp-small} {
+	      padding-left: 10px;
+	      font-size: 14px;
+	}
+	@media #{$bp-xsmall} {
+	      font-size: 13px;
+	}
+
 
 
 	&:after {
@@ -121,6 +129,9 @@
 	padding: 8px 30px;
 	display: block;
 	position: relative;
+	@media #{$bp-small} {
+	      padding: 8px 10px;
+	}
 	&:first-child:after {
 		font-family: 'icomoon';
 		// content: '\e908';
