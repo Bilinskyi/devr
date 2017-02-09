@@ -17,6 +17,10 @@
 
 .m-menu {
 	margin: 15px 0 25px; 
+	display: none;
+	@media #{$bp-small} {
+	      display: block;
+	}
 }
 
 
@@ -64,6 +68,16 @@
 .slideout-menu .h-contacts {
 	padding: 0;
 	margin: 25px 0;
+	display: none;
+	@media #{$bp-medium} {
+	      display: block;
+	}
+	@media #{$bp-small} {
+	      display: none;
+	}
+	@media #{$bp-xsmall} {
+	      display: block;
+	}
 }
 
 .h-contacts--row a {
@@ -130,7 +144,7 @@ address {
 	text-decoration: underline; 
 }
 
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 1100px) {
 	.slideout-menu {
 		position: fixed;
 		left: auto;

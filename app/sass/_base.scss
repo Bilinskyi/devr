@@ -436,3 +436,17 @@ a:hover {
     display: none;
   }
 }
+
+
+.hidden-1100 {
+  @media #{$bp-1100} {
+
+    display: none;
+  }
+}
+.visible-1100 {
+  display: none;
+  @media #{$bp-1100} {
+       display: block !important; 
+  }
+}

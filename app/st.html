@@ -24,10 +24,10 @@
 
 </head>
 <body>
-	<nav id="mobile-menu" class="slideout-menu">
+<nav id="mobile-menu" class="slideout-menu visible-1100">
 
 		<div class="slideout-menu--wrap">
-			<div class="m-menu hidden-sm">
+			<div class="m-menu">
 				<menu>
 					<li class="active"><a href="/">Главная</a></li>
 
@@ -121,7 +121,7 @@
 			</div>
 
 
-			<div class="mobile-menu--enter hidden-sm js-slide-wrap mt20">
+			<div class="mobile-menu--enter js-slide-wrap mt20">
 				<a href="" class="btn btn-white size-m btn-callback js-slide-btn ">
 					<i class="glyphicon glyphicon-phone"></i>
 					<span class="link-text">Обратный звонок</span>
@@ -234,7 +234,7 @@
 							</menu>
 						</div>
 
-						<div class="col-md-1 col-sm-2 hidden-sm hidden-xs">
+						<div class="col-md-1 col-sm-2 hidden-1100 hidden-sm hidden-xs">
 							<div class="h-enter js-dd-click-wrap">
 								<a href="" class="btn btn-grey size-m btn-block js-dd-click-btn">Вход</a>
 
@@ -274,7 +274,7 @@
 							</div>
 						</div>
 
-						<div class="slideout-btn col-sm-1 col-xs-2 hidden-md hidden-lg col-xs-2">
+						<div class="slideout-btn col-sm-1 col-xs-2 hidden-md hidden-lg col-xs-2 visible-1100">
 							<button class="slideout-menu-btn"><i class="menu-s"></i></button>
 						</div>
 					</div>
@@ -285,7 +285,7 @@
 		<main class="content">
 
 			<div class="container">
-			<div class="title-style position">статьи</div>	
+				<div class="title-style position">статьи</div>	
 			</div>
 
 			<div class="article-list">
@@ -587,7 +587,7 @@
 			</div>
 		</footer>
 
-		<div class="fix-scroll--wrap">	
+	<div class="fix-scroll--wrap hidden-1100">	
 			<div class="fix-scroll callback-fix hidden-xs">
 				<div class="fix-scroll--btn mh-2" onClick="">
 					<span class="icon">
@@ -635,6 +635,164 @@
 		</div>
 
 
+		<div style="display: none; ">
+			<div id="popup-reg">
+				<div class="popup-wrap">
+					<div class="popup-reg--header">
+						<div class="align-center">
+							<img src="img/logo_white.svg" alt="">
+						</div>
+
+						<div class="popup-reg--title align-center">РЕГИСТРАЦИЯ</div>
+
+						<div class="popup-reg--title--sub align-center">ЗДРАВСТВУЙТЕ,<br/> КАК ВАС ЗОВУТ?</div>
+					</div>
+
+					<form action="">
+						<div class="form-row align-center">
+							<input type="text" placeholder="Логин" name="" id="" class="inp-white__brown size-m field-text dib">
+						</div>
+
+						<div class="form-row align-center">
+							<div class="form-label dib">
+								<label class="form-label label-checker align-left checker-blue">
+									<input type="checkbox" checked name="" id="">
+									<span class="label-text">Я производитель</span>
+								</label>
+							</div>
+						</div>
+
+						<div class="form-row align-center">
+							<div class="form-text text-s">
+								введите, пожалуйста, адрес<br/>
+								Вашей электронной почты.
+							</div>
+						</div>
+
+						<div style="display: none; " class="form-row align-center">
+							<div class="form-text text-s c-red">
+								Ваш E-mail<br/>
+								уже зарегистрирован
+							</div>
+						</div>
+
+						<div class="form-row align-center">
+							<input type="text" placeholder="Ваш E-mail" name="" id="" class="inp-white__brown size-m field-text dib">
+						</div>
+
+						<div class="form-row align-center">
+							<div class="form-text text-s">
+								введите Ваш номер телефона. <br/>
+								На Ваш номер будет выслана смс с паролем.
+							</div>
+						</div>
+
+						<div style="display: none; " class="form-row align-center">
+							<div class="form-text text-s c-red">
+								Ваш телефонный номер <br/>
+								уже зарегистрирован
+							</div>
+						</div>
+
+						<div class="form-row align-center">
+							<input type="text" placeholder="+7(xxx) xxx xx xx" name="phone" id="" class="inp-white__brown size-m field-text dib">
+						</div>
+
+						<div style="display: none; " class="form-row align-center">
+							<div class="form-text text-s c-red">
+								Вы ввели неверный пароль. <br/>
+								Отправить пароль <a href="">повторно</a>?
+							</div>
+						</div>
+
+						<div style="display: none; " class="form-row align-center">
+							<div class="form-text text-s c-green">
+								Ваш номер подтвержден. <br/>
+								Спасибо за регистрацию.
+							</div>
+						</div>
+
+						<div class="form-row mt15 align-center">
+							<input type="text" placeholder="Имя" name="" id="" class="inp-white__brown size-m field-text dib">
+						</div>
+
+						<div class="form-row mt15 align-center">
+							<input type="password" placeholder="Пароль" name="" id="" class="inp-white__brown size-m field-text dib">
+						</div>
+
+						<div class="form-row mt15 align-center">
+							<input type="password" placeholder="Повторите пароль" name="" id="" class="inp-white__brown size-m field-text dib">
+						</div>
+
+
+						<div class="form-row mt20 align-center">
+							<div class="form-text text-s">
+								введите пароль из смс
+							</div>
+						</div>
+
+						<div class="form-row align-center">
+							<div class="form-text text-s c-green">
+								Вам высланно смс <br/>
+								с паролем, введите его в окне
+							</div>
+						</div>
+
+						<div class="form-row align-center">
+							<input type="text" placeholder="00-00-00-00" name="" id="" class="sms-code inp-white__brown size-m field-text dib">
+						</div>
+
+						<div class="form-row mt25 align-center">
+							<input type="submit" value="Готово" class="btn-grey pl30 pr30 size-m btn btn-submit">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		<div style="display: none; ">
+			<div id="popup-forgot">
+				<div class="popup-wrap">
+					<div class="popup-reg--header">
+						<div class="align-center">
+							<img src="img/logo_white.svg" alt="">
+						</div>
+
+						<div class="popup-reg--title align-center">Забыли пароль</div>
+					</div>
+
+					<form action="">
+
+						<div class="form-row align-center">
+							<div class="form-text text-s">
+								введите, пожалуйста, адрес<br/>
+								Вашей электронной почты.
+							</div>
+						</div>
+
+						<div style="display: none; " class="form-row align-center">
+							<div class="form-text text-s c-red">
+								Ваш E-mail<br/>
+								уже зарегистрирован
+							</div>
+						</div>
+
+						<div class="form-row align-center">
+							<input type="text" placeholder="Ваш E-mail" name="" id="" class="inp-white__brown size-m field-text dib">
+						</div>
+
+
+						<div class="form-row mt25 align-center">
+							<input type="submit" value="Готово" class="btn-grey pl30 pr30 size-m btn btn-submit">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 
 		<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 		<script src="js/libs.js"></script>
